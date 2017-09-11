@@ -49,6 +49,10 @@
                         </tr>
                     </table>
                 </div>
+                <div class="gil-block">
+                    <h2>Functions</h2>
+                    <p>The following static functions can be used anywhere within wordpress core:</p>
+                </div>
             </div>
 
             <?php // HTML ends
