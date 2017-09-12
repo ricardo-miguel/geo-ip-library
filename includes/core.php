@@ -8,16 +8,12 @@
 
     class GeoIPLibrary {
 
-        function __construct() {
+        function run() {
+            $scraper = new GeoIPLibraryScraper();
+            $scraper->run();
+
             $admin = new GeoIPLibraryAdmin();
             $admin->run();
-        }
-
-        function run() {
-            if(isset($_POST['update_geo_ip_library'])) {
-                $scraper = new GeoIPLibraryScraper();
-                $scraper->update_library();
-            }
         }
 
         public static function get_client_address() {
@@ -37,12 +33,18 @@
             return $client_address;
         }
 
-        public static function get_client_country_code() {
-            return getCountryFromIP(GeoIPLibrary::get_client_address());
+        public static function get_client_country_code($ip = '') {
+            if(empty($ip))
+                return getCountryFromIP(GeoIPLibrary::get_client_address());
+            else
+                return getCountryFromIP($ip);
         }
 
-        public static function get_client_country_name() {
-            return getCountryFromIP(GeoIPLibrary::get_client_address(), 'name');
+        public static function get_client_country_name($ip = '') {
+            if(empty($ip))
+                return getCountryFromIP(GeoIPLibrary::get_client_address(), 'name');
+            else
+                return getCountryFromIP($ip, 'name');
         }
         
     }
