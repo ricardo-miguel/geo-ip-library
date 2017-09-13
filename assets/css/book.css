@@ -4,6 +4,26 @@
   width: 100%;
 }
 
+.bookshelf_wrapper.paused .book_item,
+.bookshelf_wrapper.paused .shelf:before,
+.bookshelf_wrapper.paused .shelf:after {
+  animation-play-state: paused;
+}
+
+.bookshelf_wrapper.paused .book_item,
+.bookshelf_wrapper.paused .book_item:before,
+.bookshelf_wrapper.paused .book_item:after {
+  border-color: #E4A8A8;
+}
+
+.bookshelf_wrapper.paused .book_item.first:before,
+.bookshelf_wrapper.paused .book_item.first:after,
+.bookshelf_wrapper.paused .book_item.sixth::before,
+.bookshelf_wrapper.paused .shelf::before,
+.bookshelf_wrapper.paused .shelf::after {
+  background-color: #E4A8A8;
+}
+
 .books_list {
   margin: 0 auto;
   width: 300px;
@@ -24,6 +44,7 @@
   transform-origin: bottom left;
   transform: translateX(300px);
   animation: travel 2500ms linear infinite;
+  transition: border-color 0.5s ease-out, background-color 0.5s ease-out, color 0.5s ease-out;
 }
 
 .book_item.first {

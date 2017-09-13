@@ -3,6 +3,7 @@ $duration: 2500;
 $delay: $duration/6;
 $color: #CCC;
 $contrast: #FFF;
+$error: #E4A8A8;
 
 @mixin polka($size, $dot, $base, $accent){
   background: $base;
@@ -16,6 +17,20 @@ $contrast: #FFF;
   position: relative;
   width: 100%;
 }
+
+  .bookshelf_wrapper.paused .book_item,
+  .bookshelf_wrapper.paused .shelf:before,
+  .bookshelf_wrapper.paused .shelf:after { animation-play-state: paused; }
+
+  .bookshelf_wrapper.paused .book_item,
+  .bookshelf_wrapper.paused .book_item:before,
+  .bookshelf_wrapper.paused .book_item:after { border-color: $error }
+
+  .bookshelf_wrapper.paused .book_item.first:before,
+  .bookshelf_wrapper.paused .book_item.first:after,
+  .bookshelf_wrapper.paused .book_item.sixth::before,
+  .bookshelf_wrapper.paused .shelf::before,
+  .bookshelf_wrapper.paused .shelf::after { background-color: $error }
 
 .books_list {
   margin: 0 auto;
@@ -37,6 +52,7 @@ $contrast: #FFF;
   transform-origin: bottom left;
   transform: translateX(300px);
   animation: travel #{$duration}ms linear infinite;
+  transition: border-color 0.5s ease-out, background-color 0.5s ease-out, color 0.5s ease-out;
   
   &.first {
     height: 140px;

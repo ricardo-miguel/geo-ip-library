@@ -3,26 +3,37 @@
     /**
     * Plugin Name: Geo IP Library
     * Plugin URI: http://ricardomiguel.cl/
-    * Description: Provides several PHP geolocalization functions by scoping <a href="http://chir.ag/projects/geoiploc/">Chir's geoiploc library</a>.
-    * Version: 0.5.1
+    * Description: Provides several PHP geolocation functions by scoping <a href="http://chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
+    * Version: 0.7.5
     * Author: <a href="http://ricardomiguel.cl">Ricardo Miguel</a>.
     * License: EULA
     */
 
-    /* Avoid direct access */
+    /**
+     * Avoid direct file access
+     */
     defined('ABSPATH') or die('No script kiddies, please!');
 
-    /* Current version */
-    define('GILVER', '0.5.1');
+    /**
+     * Set current version
+     */
+    define('GILVER', '0.7.5');
 
-    /* Common constants */
+    /**
+     * Set common constants
+     */
     define('GILURL', plugin_dir_url(__FILE__));
     define('GILPATH', plugin_dir_path(__FILE__));
 
-    /* Load core */
+    /**
+     * Load plugin core
+     */
     require(GILPATH . 'includes/core.php');
     
-    /* Init */
+    /**
+     * Initializes plugin
+     * @return void
+     */
     function geoIPLibraryInit() {
         $instance = new GeoIPLibrary();
         $instance->run();

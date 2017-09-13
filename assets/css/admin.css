@@ -134,6 +134,8 @@
 
 .gil-update-wrapper .process {
   display: inline-block;
+  max-width: 500px;
+  width: 100%;
   margin-top: 2em;
   height: 128px;
   line-height: 1;
@@ -141,10 +143,11 @@
 
 .gil-update-wrapper .gil-update-content .downloading,
 .gil-update-wrapper .gil-update-content .decompressing,
-.gil-update-wrapper .gil-update-content .done {
+.gil-update-wrapper .gil-update-content .done,
+.gil-update-wrapper .gil-update-content .failure {
   display: none;
   font-size: 24pt;
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 40px, 0);
   transition: transform 0.4s ease-out;
 }
 
