@@ -59,12 +59,15 @@
             require(GILPATH . 'includes/htmlizer.php');
             $latest_update         = (get_option('geo_ip_library_latest_update')) ? get_option('geo_ip_library_latest_update') : null;
             $string_latest_update  = (is_null($latest_update)) ? 'Never' : strtolower(date('\o\n l, jS F \a\t H:i:s', strtotime($latest_update))) . ' (GMT+0)';
+            $diff_latest_update    = date_diff(new DateTime($latest_update), new DateTime());
+            $diff_total_hours      = ($diff_latest_update->d * 24) + $diff_latest_update->h;
             $file_size             = round(filesize(GILPATH . 'lib/geoiploc.php') / 1000) . ' KB';
 
             $vars = array(
                 "plugin_version" => GILVER,
                 "latest_update" => $latest_update,
                 "string_latest_update" => $string_latest_update,
+                "diff_update" => $diff_total_hours,
                 "php_version" => phpversion(), 
                 "file_size" => $file_size
             );

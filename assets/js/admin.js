@@ -1,6 +1,11 @@
 (function($) {
 
     /**
+     * Interval (in hours) to allow library update from latest update date
+     */
+    var update_interval = 72;
+
+    /**
      * Fade transition time (in milliseconds) for update wrapper
      */
     var fade = 250;
@@ -43,11 +48,9 @@
      * Main events settled when document is ready
      */
     $(document).ready(function() {
+        update_availability();
         if($('.time-ago').text() != 'Never')
             $('.time-ago').timeago();
-        $('.update').on('click', function() {
-            return update_library();
-        });
         $('.gil-close').on('click', function() {
             $('.gil-update-wrapper').fadeOut(fade, function() {
                 reset_steps();
@@ -87,8 +90,11 @@
                     console.log(response);
                     if(response.success) {
                         update_library();
-                        if(response.date && response.string_date)
+                        if(response.date && response.string_date) {
                             $('.time-ago').data('timeago', null).attr('datetime', response.date).text(response.string_date).timeago();
+                            $('.update').attr('diff', 0);
+                            update_availability();
+                        }
                         if(response.size)
                             $('.gil-size').text(response.size);
                     } else {
@@ -138,6 +144,19 @@
             $('.process .failure .exception').text(exceptions[ex]);
             $('.process .failure').fadeIn(process).css('transform', 'translate3d(0, 0px, 0)');
         });
+    }
+
+    function update_availability() {
+        var update_diff = $('.update').attr('diff');
+        if(update_diff == '' || update_diff >= update_interval) {
+            $('.update').on('click', function() {
+                return update_library();
+            });
+        } else {
+            var remain = update_interval - update_diff;
+            var hours  = (remain == 1) ? 'HOUR' : 'HOURS';
+            $('.update').hide().after('<span class="remain">[ UPDATE AVAILABLE IN ' + remain + ' ' + hours + ' ]</span>');
+        }
     }
 
 })(jQuery);

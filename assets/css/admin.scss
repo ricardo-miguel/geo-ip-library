@@ -7,7 +7,7 @@ $prefix: 'gil';
 
 .#{$prefix}-wrapper {
     display: block;
-    width: 500px;
+    width: 560px;
     max-width: 100%;
 }
 
@@ -49,10 +49,13 @@ $prefix: 'gil';
             padding-right: 1.5em;
         }
 
-    .#{$prefix}-block .update {
+    .#{$prefix}-block .update,
+    .#{$prefix}-block .remain {
         font-size: 8pt;
         margin-left: 0.4em;
     }
+
+    .#{$prefix}-block .remain { color: #999; }
 
 .#{$prefix}-center { text-align: center; }
 

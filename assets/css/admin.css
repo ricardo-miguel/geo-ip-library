@@ -5,7 +5,7 @@
 
 .gil-wrapper {
   display: block;
-  width: 540px;
+  width: 560px;
   max-width: 100%;
 }
 
@@ -49,9 +49,14 @@
   padding-right: 1.5em;
 }
 
-.gil-block .update {
+.gil-block .update,
+.gil-block .remain {
   font-size: 8pt;
   margin-left: 0.4em;
+}
+
+.gil-block .remain {
+  color: #999;
 }
 
 .gil-center {
@@ -102,7 +107,7 @@
   font-size: 9pt;
   background-color: #EAEAEA;
   text-transform: uppercase;
-  width: 86px;
+  width: 80px;
   text-align: center;
 }
 

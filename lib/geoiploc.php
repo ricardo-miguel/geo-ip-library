@@ -11,7 +11,7 @@
 All the functions, data conversion etc. have been written specifically
 for the PHP GeoIPLocation Library by Chirag Mehta.
 
-GeoIPLoc code & data last updated: Mon Sep 25 12:50:00 EDT 2017.
+GeoIPLoc code & data last updated: Tue Sep 26 12:50:00 EDT 2017.
 Note: This library is updated automatically once a day.
 
 This library is released under the: Creative Commons License: Attribution 2.5
