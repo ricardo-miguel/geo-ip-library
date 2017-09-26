@@ -4,7 +4,7 @@
     * Plugin Name: Geo IP Library
     * Plugin URI: http://ricardomiguel.cl/
     * Description: Provides several PHP geolocation functions by scoping <a href="http://chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
-    * Version: 0.7.5
+    * Version: 0.9.8
     * Author: <a href="http://ricardomiguel.cl">Ricardo Miguel</a>.
     * License: EULA
     */
@@ -17,7 +17,7 @@
     /**
      * Set current version
      */
-    define('GILVER', '0.7.5');
+    define('GILVER', '0.9.8');
 
     /**
      * Set common constants

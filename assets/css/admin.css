@@ -5,7 +5,7 @@
 
 .gil-wrapper {
   display: block;
-  width: 500px;
+  width: 540px;
   max-width: 100%;
 }
 
@@ -102,7 +102,7 @@
   font-size: 9pt;
   background-color: #EAEAEA;
   text-transform: uppercase;
-  width: 80px;
+  width: 86px;
   text-align: center;
 }
 

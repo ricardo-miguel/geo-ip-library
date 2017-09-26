@@ -1,0 +1,114 @@
+<div class="gil-wrapper">
+    <div class="gil-block gil-center">
+        <h1>Geo IP Library</h1>
+    </div>
+    <p class="gil-by">source by <a href="//chir.ag/projects/geoiploc/">Chirag Mehta</a> | scrapped by <a href="//ricardomiguel.cl">Ricardo Miguel</a> | version {plugin_version}</p>
+    <div class="gil-block">
+        <h2>Source</h2>
+        <table>
+            <tr>
+                <td>Latest update</td><td><time class="time-ago" datetime="{latest_update}">{string_latest_update}</time> <a class="update" href="#">[ <span class="dashicons dashicons-update" style="margin-top: -0.1em"></span> UPDATE NOW ]</a></td>
+            </tr>
+            <tr>
+                <td>Size</td><td class="gil-size">{file_size}</td>
+            </tr>
+            <tr>
+                <td>Required PHP version</td><td>>= 5.3</td>
+            </tr>
+            <tr>
+                <td>Server PHP version</td><td>{php_version}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="gil-block">
+        <h2>Shortcode</h2>
+        <p>Display different contents within posts and pages under specified country or countries when using [geo-ip-library] or [geo] tags. The available syntaxes are:</p>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">[geo-ip-library country<span style="color: #936">="</span><span style="color: #693">{2-digit country [, other countries]}</span><span style="color: #936">"</span>]<span style="color: #666">{plain text, HTML and/or shortcodes}</span>[/geo-ip-library]</span></td><td class="return">SYNTAX</td>
+            </tr>
+        </table>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">[geo country<span style="color: #936">="</span><span style="color: #693">{2-digit country [, other countries]}</span><span style="color: #936">"</span>]<span style="color: #666">{plain text, HTML and/or shortcodes}</span>[/geo]</span></td><td class="return">SYNTAX</td>
+            </tr>
+        </table>
+        <p>A few usage examples:</p>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">[geo country<span style="color: #936">="</span><span style="color: #693">US</span><span style="color: #936">"</span>]<span style="color: #666">Hello world!</span>[/geo]</span></td><td rowspan="2" class="return">SINGLE COUNTRY</td>
+            </tr>
+            <tr>
+                <td class="description">This will display <i>Hello World!</i> to all visitors from USA. Others will not see anything at all.</td>
+            </tr>
+        </table>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">[geo country<span style="color: #936">="</span><span style="color: #693">CL,ES,MX</span><span style="color: #936">"</span>]<span style="color: #666">¡Hola mundo!</span>[/geo]</span></td><td rowspan="2" class="return">MULTIPLE COUNTRIES</td>
+            </tr>
+            <tr>
+                <td class="description">This will display <i>¡Hola mundo!</i> to all visitors from Chile, Spain and Mexico. Others will not see anything at all.</td>
+            </tr>
+        </table>
+        <p>You can also use shortcodes within geo shortcode:</p>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">[geo country<span style="color: #936">="</span><span style="color: #693">CA</span><span style="color: #936">"</span>]<span style="color: #666">We're ready to go! See details below:</span> <span style="color: #755">[my-other-shortcode]</span>[/geo]</span></td><td rowspan="2" class="return">SHORTCODE-CEPTION</td>
+            </tr>
+            <tr>
+                <td class="description">This will display the content to all visitors from Canada and will process <i>[my-other-shortcode]</i> shortcode. Others will not see anything at all.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="gil-block">
+        <h2>Coding</h2>
+        <p>The following static functions can be used anywhere along GeoIPLibrary class:</p>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">get_client_address()</span></td><td class="return">string</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="description">Returns the current client's IP address. It bypasses proxies, forwarding and network masks.</td>
+            </tr>
+        </table>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">get_client_country_code</span>(<span style="color: #693">string</span> <span style="color: #369">$ip</span> <span style="color: #936">= ''</span>)</td><td class="return">string</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="description">Returns the current client's <a href="https://wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country code or the specified in <span style="color: #369">$ip</span> (inherits <span style="color: #369">get_client_address()</span> algorithm in that case).</td>
+            </tr>
+        </table>
+        <table class="gil-function">
+            <tr>
+                <td class="name"><span style="color: #369">get_client_country_name</span>(<span style="color: #693">string</span> <span style="color: #369">$ip</span> <span style="color: #936">= ''</span>)</td><td class="return">string</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="description">Returns the current client's country name or the specified in <span style="color: #369">$ip</span> (inherits <span style="color: #369">get_client_address()</span> algorithm in that case).</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="gil-update-wrapper">
+    <div class="gil-update-content">
+        <div class="animation">
+            <div class="bookshelf_wrapper">
+                <ul class="books_list">
+                    <li class="book_item first"></li>
+                    <li class="book_item second"></li>
+                    <li class="book_item third"></li>
+                    <li class="book_item fourth"></li>
+                    <li class="book_item fifth"></li>
+                    <li class="book_item sixth"></li>
+                </ul>
+                <div class="shelf"></div>
+                </div>
+            </div>
+        <div class="process">
+            <div class="downloading">Downloading library package <span class="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span></div>
+            <div class="decompressing">Decompressing library file <span class="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span></div>
+            <div class="done">Everything works like a charm!<br /><a class="gil-button gil-close" href="#">OK, you're the best!</a></div>
+            <div class="failure"><div class="exception"></div><br /><a class="gil-button gil-close" href="#">For sure I will</a></div>
+        </div>
+    </div>
+</div>

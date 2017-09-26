@@ -11,8 +11,9 @@
     * modify if is not really necessary.          *
     * * * * * * * * * * * * * * * * * * * * * * * */
 
-    require(GILPATH . 'includes/admin.php');
     require(GILPATH . 'includes/scraper.php');
+    require(GILPATH . 'includes/shortcode.php');
+    require(GILPATH . 'includes/admin.php');
 
     if(!function_exists('getCountryFromIP'))
         require(GILPATH . 'lib/geoiploc.php');
@@ -27,6 +28,9 @@
         function run() {
             $scraper = new GeoIPLibraryScraper();
             $scraper->run();
+
+            $shortcode = new GeoIPLibraryShortcode();
+            $shortcode->run();
 
             $admin = new GeoIPLibraryAdmin();
             $admin->run();
