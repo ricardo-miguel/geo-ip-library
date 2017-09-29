@@ -1,0 +1,230 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Geo IP Library\n"
+"POT-Creation-Date: 2017-09-29 02:49-0300\n"
+"PO-Revision-Date: 2017-09-29 02:48-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: geo-ip-library.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/admin.php:53 includes/admin.php:91
+msgid "Never"
+msgstr ""
+
+#: includes/admin.php:54
+#, php-format
+msgid "UPDATE AVAILABLE IN %d %s"
+msgstr ""
+
+#: includes/admin.php:55
+msgid "HOUR"
+msgstr ""
+
+#: includes/admin.php:56
+msgid "HOURS"
+msgstr ""
+
+#: includes/admin.php:57
+msgid ""
+"Something went wrong while attempting to download from source. Try again "
+"later."
+msgstr ""
+
+#: includes/admin.php:58
+msgid "It seems that source library is updating itself, give it a try later."
+msgstr ""
+
+#: includes/admin.php:59
+msgid ""
+"There was something weird while trying to unzip the source file. Try again "
+"in a few minutes."
+msgstr ""
+
+#: includes/admin.php:60
+msgid ""
+"Huh! The library source was suppose to be found, but is not! Check for "
+"writing and reading permissions and try it again."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: includes/admin.php:97
+msgid "Geo IP Library"
+msgstr ""
+
+#: includes/admin.php:98
+#, php-format
+msgid "source library by %s"
+msgstr ""
+
+#: includes/admin.php:99
+#, php-format
+msgid "scraping by %s"
+msgstr ""
+
+#: includes/admin.php:100
+msgid "Source"
+msgstr ""
+
+#: includes/admin.php:101
+msgid "Latest update"
+msgstr ""
+
+#: includes/admin.php:105
+msgid "UPDATE NOW"
+msgstr ""
+
+#: includes/admin.php:106
+msgid "Library size"
+msgstr ""
+
+#: includes/admin.php:108
+msgid "PHP Version"
+msgstr ""
+
+#: includes/admin.php:110
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin.php:111
+#, php-format
+msgid ""
+"Display different contents for each country (or countries) within posts and "
+"pages by using %s or %s tags. To do magic, use the following syntax:"
+msgstr ""
+
+#: includes/admin.php:112
+msgid "SYNTAX"
+msgstr ""
+
+#: includes/admin.php:113
+msgid "{2-digits country code [, other countries]}"
+msgstr ""
+
+#: includes/admin.php:114
+msgid "{plain text, HTML and/or shortcodes}"
+msgstr ""
+
+#: includes/admin.php:115
+msgid "A few usage examples"
+msgstr ""
+
+#: includes/admin.php:116
+msgid "SINGLE COUNTRY"
+msgstr ""
+
+#: includes/admin.php:117
+#, php-format
+msgid ""
+"This will display %s to all visitors from USA. Others will not see anything "
+"at all."
+msgstr ""
+
+#: includes/admin.php:118
+msgid "MULTIPLE COUNTRIES"
+msgstr ""
+
+#: includes/admin.php:119
+#, php-format
+msgid ""
+"This will display %s to all visitors from Chile, Spain and Mexico. Others "
+"will not see anything at all."
+msgstr ""
+
+#: includes/admin.php:120
+msgid "You can also call other shortcodes inside:"
+msgstr ""
+
+#: includes/admin.php:121
+msgid "We're ready to go! See details below:"
+msgstr ""
+
+#: includes/admin.php:122 includes/admin.php:123
+msgid "[my-other-shortcode]"
+msgstr ""
+
+#: includes/admin.php:123
+#, php-format
+msgid ""
+"This will display the content to all visitors from Canada and will process "
+"%s shortcode. Others will not see anything at all."
+msgstr ""
+
+#: includes/admin.php:124
+msgid "SHORTCODE-CEPTION"
+msgstr ""
+
+#: includes/admin.php:125
+msgid "Coding"
+msgstr ""
+
+#: includes/admin.php:126
+#, php-format
+msgid "The following static functions can be used anywhere along %s class:"
+msgstr ""
+
+#: includes/admin.php:127
+msgid ""
+"Returns the current client's IP address. It bypasses proxies and/or "
+"forwarding."
+msgstr ""
+
+#: includes/admin.php:128
+#, php-format
+msgid ""
+"Returns the current client's %s country code or the specified at %s "
+"parameter."
+msgstr ""
+
+#: includes/admin.php:129
+#, php-format
+msgid ""
+"Returns the current client's country name or the specified at %s parameter."
+msgstr ""
+
+#: includes/admin.php:130
+msgid "Downloading library package"
+msgstr ""
+
+#: includes/admin.php:131
+msgid "Decompressing library file"
+msgstr ""
+
+#: includes/admin.php:132
+msgid "Everything works like a charm!"
+msgstr ""
+
+#: includes/admin.php:133
+msgid "OK, you're the best!"
+msgstr ""
+
+#: includes/admin.php:134
+msgid "For sure I will"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://ricardomiguel.cl/projects/geo-ip-library"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Provides several PHP geolocation functions and shortcodes by using <a href="
+"\"http://chir.ag/projects/geoiploc/\">Chir's geolocation library</a>."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "<a href=\"http://ricardomiguel.cl\">Ricardo Miguel</a>."
+msgstr ""

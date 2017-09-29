@@ -1,4 +1,4 @@
-$prefix: 'gil';
+$prefix: 'geo-ip';
 
 .#{$prefix} { }
 
@@ -7,8 +7,9 @@ $prefix: 'gil';
 
 .#{$prefix}-wrapper {
     display: block;
-    width: 560px;
+    width: 640px;
     max-width: 100%;
+    margin-top: 0.5em;
 }
 
 .#{$prefix}-block {
@@ -52,7 +53,7 @@ $prefix: 'gil';
     .#{$prefix}-block .update,
     .#{$prefix}-block .remain {
         font-size: 8pt;
-        margin-left: 0.4em;
+        margin-left: 1em;
     }
 
     .#{$prefix}-block .remain { color: #999; }
@@ -99,7 +100,7 @@ $prefix: 'gil';
         font-size: 9pt;
         background-color: #EAEAEA;
         text-transform: uppercase;
-        width: 80px;
+        width: 90px;
         text-align: center;
     }
 

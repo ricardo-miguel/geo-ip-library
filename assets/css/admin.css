@@ -1,15 +1,16 @@
-.gil-wrapper,
-.gil-wrapper * {
+.geo-ip-wrapper,
+.geo-ip-wrapper * {
   box-sizing: border-box;
 }
 
-.gil-wrapper {
+.geo-ip-wrapper {
   display: block;
-  width: 560px;
+  width: 640px;
   max-width: 100%;
+  margin-top: 0.5em;
 }
 
-.gil-block {
+.geo-ip-block {
   display: inline-block;
   width: 100%;
   background-color: #FFF;
@@ -18,58 +19,58 @@
   box-shadow: 0px 0px 4px #D5D5D5;
 }
 
-.gil-block h1 {
+.geo-ip-block h1 {
   margin: 0.5em;
 }
 
-.gil-block h2 {
+.geo-ip-block h2 {
   font-weight: 600;
   margin-top: 0;
   border-bottom: 1px dotted #E1E1E1;
   padding-bottom: 0.25em;
 }
 
-.gil-block a {
+.geo-ip-block a {
   display: inline-block;
   text-decoration: none;
 }
 
-.gil-block a .dashicons {
+.geo-ip-block a .dashicons {
   vertical-align: middle;
   font-size: 150%;
   width: auto;
   height: auto;
 }
 
-.gil-block table {
+.geo-ip-block table {
   width: 100%;
 }
 
-.gil-block table tr td:first-of-type {
+.geo-ip-block table tr td:first-of-type {
   padding-right: 1.5em;
 }
 
-.gil-block .update,
-.gil-block .remain {
+.geo-ip-block .update,
+.geo-ip-block .remain {
   font-size: 8pt;
-  margin-left: 0.4em;
+  margin-left: 1em;
 }
 
-.gil-block .remain {
+.geo-ip-block .remain {
   color: #999;
 }
 
-.gil-center {
+.geo-ip-center {
   text-align: center;
 }
 
-.gil-by {
+.geo-ip-by {
   text-align: center;
   font-size: 9pt;
   margin-top: 0em;
 }
 
-.gil-button {
+.geo-ip-button {
   display: inline-block;
   background-color: #0073AA;
   color: #FBFBFB;
@@ -82,12 +83,12 @@
   transition: color 0.25s ease-out, background-color 0.25s ease-out;
 }
 
-.gil-button:hover {
+.geo-ip-button:hover {
   background-color: transparent;
   color: #0073AA;
 }
 
-.gil-function {
+.geo-ip-function {
   display: inline-table;
   width: 100%;
   border: 2px solid #EAEAEA;
@@ -95,28 +96,28 @@
   border-collapse: collapse;
 }
 
-.gil-function td {
+.geo-ip-function td {
   padding: 0.25em 0.5em;
 }
 
-.gil-function .name {
+.geo-ip-function .name {
   font-weight: 400;
 }
 
-.gil-function .return {
+.geo-ip-function .return {
   font-size: 9pt;
   background-color: #EAEAEA;
   text-transform: uppercase;
-  width: 80px;
+  width: 90px;
   text-align: center;
 }
 
-.gil-function .name,
-.gil-function .return {
+.geo-ip-function .name,
+.geo-ip-function .return {
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-.gil-update-wrapper {
+.geo-ip-update-wrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -127,17 +128,17 @@
   z-index: 99999;
 }
 
-.gil-update-wrapper .gil-update-content {
+.geo-ip-update-wrapper .geo-ip-update-content {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 
-.gil-update-wrapper .animation {
+.geo-ip-update-wrapper .animation {
   transition: transform 0.2s ease-out;
 }
 
-.gil-update-wrapper .process {
+.geo-ip-update-wrapper .process {
   display: inline-block;
   max-width: 500px;
   width: 100%;
@@ -146,10 +147,10 @@
   line-height: 1;
 }
 
-.gil-update-wrapper .gil-update-content .downloading,
-.gil-update-wrapper .gil-update-content .decompressing,
-.gil-update-wrapper .gil-update-content .done,
-.gil-update-wrapper .gil-update-content .failure {
+.geo-ip-update-wrapper .geo-ip-update-content .downloading,
+.geo-ip-update-wrapper .geo-ip-update-content .decompressing,
+.geo-ip-update-wrapper .geo-ip-update-content .done,
+.geo-ip-update-wrapper .geo-ip-update-content .failure {
   display: none;
   font-size: 24pt;
   transform: translate3d(0, 40px, 0);

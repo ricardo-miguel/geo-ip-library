@@ -96,7 +96,7 @@
          */
         function geo_ip_update_latest() {
             $now = date('c');
-            $string_now = strtolower(date('\o\n l, jS F \a\t H:i:s', strtotime($now))) . ' (GMT+0)';
+            $string_now = date('l, jS F H:i:s (eP)', strtotime($now));
             $file_size = round(filesize(GEO_IP_LIBRARY_PATH . 'lib/geoiploc.php') / 1000) . ' KB';
             if(get_option('geo_ip_library_latest_update'))
                 update_option('geo_ip_library_latest_update', $now);
