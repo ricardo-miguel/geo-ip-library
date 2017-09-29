@@ -38,7 +38,7 @@
                 wp_enqueue_script('geo-ip-library-timeago-script', GEO_IP_LIBRARY_URL . 'assets/js/jquery.timeago.js', 'jquery');
                 wp_enqueue_script('geo-ip-library-admin-script', GEO_IP_LIBRARY_URL . 'assets/js/admin.min.js', 'jquery');
 
-                $this->l10n_assets();
+                $this->i10n_assets();
             }
         }
 
@@ -48,19 +48,19 @@
          * @since   0.8
          * @return  void
          */
-        function l10n_assets() {
-            $l10n_geo_ip = array(
+        function i10n_assets() {
+            $i10n_geo_ip = array(
                 "NEVER"                => __('Never', 'geo-ip-library'),
                 "UPDATE_AVAILABLE_IN"  => __('UPDATE AVAILABLE IN %d %s', 'geo-ip-library'),
                 "HOUR"                 => __('HOUR', 'geo-ip-library'),
                 "HOURS"                => __('HOURS', 'geo-ip-library'),
-                "EX_FILE_DOWNLOAD"     => __('Something went wrong while attempting to download from source. Try again later.', 'geo-ip-library'),
+                "EX_FILE_DOWNLOAD"     => __('Something went wrong while attempting to download from the source. Try again later.', 'geo-ip-library'),
                 "EX_FILE_SIZE"         => __('It seems that source library is updating itself, give it a try later.', 'geo-ip-library'),
-                "EX_FILE_EXTRACTION"   => __('There was something weird while trying to unzip the source file. Try again in a few minutes.', 'geo-ip-library'),
-                "EX_FILE_NOT_FOUND"    => __('Huh! The library source was suppose to be found, but is not! Check for writing and reading permissions and try it again.', 'geo-ip-library')
+                "EX_FILE_EXTRACTION"   => __('There was something weird while attempting to unzip the source file. Try again in a few minutes.', 'geo-ip-library'),
+                "EX_FILE_NOT_FOUND"    => __('Huh! The library source was suppose to be here, but is not! Check for writing and reading permissions and try it again.', 'geo-ip-library')
             );
 
-            wp_localize_script( 'geo-ip-library-admin-script', 'l10n_geo_ip', $l10n_geo_ip);
+            wp_localize_script( 'geo-ip-library-admin-script', 'i10n_geo_ip', $i10n_geo_ip);
         }
 
         /**
@@ -71,8 +71,8 @@
         function menu() {
             add_submenu_page(
                 'tools.php',
-                'Geo IP Library',
-                'Geo IP Library',
+                __('Geo IP Library', 'geo-ip-library'),
+                __('Geo IP Library', 'geo-ip-library'),
                 'manage_options',
                 'geo-ip-library-settings',
                 array($this, 'settings')
@@ -108,7 +108,7 @@
                 "PHP_VERSION"                    => __('PHP Version', 'geo-ip-library'),
                 "PHP_VERSION_FUNC"               => phpversion(),
                 "SHORTCODE"                      => __('Shortcode', 'geo-ip-library'),
-                "SHORTCODE_DESCRIPTION"          => sprintf(__('Display different contents for each country (or countries) within posts and pages by using %s or %s tags. To do magic, use the following syntax:', 'geo-ip-library'), '<strong>[geo-ip]</strong>', '<strong>[geo]</strong>'),
+                "SHORTCODE_DESCRIPTION"          => sprintf(__('Display different content for each country (or countries) within posts and pages by using %s or %s tags. To do magic, use the following syntax:', 'geo-ip-library'), '<strong>[geo-ip]</strong>', '<strong>[geo]</strong>'),
                 "SYNTAX"                         => __('SYNTAX', 'geo-ip-library'),
                 "SYNTAX_COUNTRY"                 => __('{2-digits country code [, other countries]}', 'geo-ip-library'),
                 "SYNTAX_CONTENT"                 => __('{plain text, HTML and/or shortcodes}', 'geo-ip-library'),
@@ -130,7 +130,7 @@
                 "DOWNLOADING"                    => __('Downloading library package', 'geo-ip-library'),
                 "DECOMPRESSING"                  => __('Decompressing library file', 'geo-ip-library'),
                 "DONE"                           => __('Everything works like a charm!', 'geo-ip-library'),
-                "OK_BUTTON"                      => __('OK, you\'re the best!', 'geo-ip-library'),
+                "OK_BUTTON"                      => __('Great!', 'geo-ip-library'),
                 "ERROR_BUTTON"                   => __('For sure I will', 'geo-ip-library')
             );
 

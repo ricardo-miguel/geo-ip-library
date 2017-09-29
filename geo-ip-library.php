@@ -3,11 +3,11 @@
     /**
     * Plugin Name: Geo IP Library
     * Plugin URI: http://ricardomiguel.cl/projects/geo-ip-library
-    * Description: Provides several PHP geolocation functions and shortcodes by using <a href="http://chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
+    * Description: Provides simple country location features by using <a href="http://chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
     * Version: 0.8.9
     * Author: <a href="http://ricardomiguel.cl">Ricardo Miguel</a>.
     * Text Domain: geo-ip-library
-    * Domain path: /languages
+    * Domain Path: /languages
     * License: GPLv3
     * License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
     *

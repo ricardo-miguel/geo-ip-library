@@ -69,10 +69,10 @@
      * @type    {object}
      */
     var exceptions = {
-        "FILE_DOWNLOAD"     : l10n_geo_ip.EX_FILE_EXTRACTION,
-        "FILE_SIZE"         : l10n_geo_ip.EX_FILE_SIZE,
-        "FILE_EXTRACTION"   : l10n_geo_ip.EX_FILE_EXTRACTION,
-        "FILE_NOT_FOUND"    : l10n_geo_ip.EX_FILE_NOT_FOUND
+        "FILE_DOWNLOAD"     : i10n_geo_ip.EX_FILE_EXTRACTION,
+        "FILE_SIZE"         : i10n_geo_ip.EX_FILE_SIZE,
+        "FILE_EXTRACTION"   : i10n_geo_ip.EX_FILE_EXTRACTION,
+        "FILE_NOT_FOUND"    : i10n_geo_ip.EX_FILE_NOT_FOUND
     };
 
     /**
@@ -83,7 +83,7 @@
      */
     $(document).ready(function() {
         update_availability();
-        if($('.time-ago').text() != l10n_geo_ip.NEVER)
+        if($('.time-ago').text() != i10n_geo_ip.NEVER)
             $('.time-ago').timeago();
         $('.geo-ip-close').on('click', function() {
             $('.geo-ip-update-wrapper').fadeOut(fade, function() {
@@ -203,15 +203,15 @@
      */
     function update_availability() {
         var update_diff = $('.update').attr('diff');
-        var never       = ($('.time-ago').text() == l10n_geo_ip.NEVER);  
+        var never       = ($('.time-ago').text() == i10n_geo_ip.NEVER);  
         if(update_diff == '' || update_diff >= update_interval || never) {
             $('.update').on('click', function() {
                 return update_library();
             });
         } else {
             var remain       = update_interval - update_diff;
-            var hours        = (remain == 1) ? l10n_geo_ip.HOUR : l10n_geo_ip.HOURS;
-            var available_in = l10n_geo_ip.UPDATE_AVAILABLE_IN.replace('%d', remain).replace('%s', hours);
+            var hours        = (remain == 1) ? i10n_geo_ip.HOUR : i10n_geo_ip.HOURS;
+            var available_in = i10n_geo_ip.UPDATE_AVAILABLE_IN.replace('%d', remain).replace('%s', hours);
             $('.update').after('<span class="remain">[ ' + available_in + ' ]</span>').remove();
         }
     }

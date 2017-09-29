@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Geo IP Library\n"
-"POT-Creation-Date: 2017-09-29 02:49-0300\n"
+"POT-Creation-Date: 2017-09-29 16:46-0300\n"
 "PO-Revision-Date: 2017-09-29 02:48-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: geo-ip-library.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -40,8 +40,8 @@ msgstr ""
 
 #: includes/admin.php:57
 msgid ""
-"Something went wrong while attempting to download from source. Try again "
-"later."
+"Something went wrong while attempting to download from the source. Try "
+"again later."
 msgstr ""
 
 #: includes/admin.php:58
@@ -50,18 +50,18 @@ msgstr ""
 
 #: includes/admin.php:59
 msgid ""
-"There was something weird while trying to unzip the source file. Try again "
-"in a few minutes."
+"There was something weird while attempting to unzip the source file. Try "
+"again in a few minutes."
 msgstr ""
 
 #: includes/admin.php:60
 msgid ""
-"Huh! The library source was suppose to be found, but is not! Check for "
+"Huh! The library source was suppose to be here, but is not! Check for "
 "writing and reading permissions and try it again."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/admin.php:97
+#: includes/admin.php:74 includes/admin.php:75 includes/admin.php:97
 msgid "Geo IP Library"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 #: includes/admin.php:111
 #, php-format
 msgid ""
-"Display different contents for each country (or countries) within posts and "
+"Display different content for each country (or countries) within posts and "
 "pages by using %s or %s tags. To do magic, use the following syntax:"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgid "Everything works like a charm!"
 msgstr ""
 
 #: includes/admin.php:133
-msgid "OK, you're the best!"
+msgid "Great!"
 msgstr ""
 
 #: includes/admin.php:134
@@ -221,8 +221,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Provides several PHP geolocation functions and shortcodes by using <a href="
-"\"http://chir.ag/projects/geoiploc/\">Chir's geolocation library</a>."
+"Provides simple country location features by using <a href=\"http://chir.ag/"
+"projects/geoiploc/\">Chir's geolocation library</a>."
 msgstr ""
 
 #. Author of the plugin/theme

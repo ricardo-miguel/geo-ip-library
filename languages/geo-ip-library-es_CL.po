@@ -1,108 +1,116 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Geo IP Library\n"
-"POT-Creation-Date: 2017-09-29 02:49-0300\n"
-"PO-Revision-Date: 2017-09-29 03:07-0300\n"
+"POT-Creation-Date: 2017-09-29 16:46-0300\n"
+"PO-Revision-Date: 2017-09-29 16:47-0300\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: es_CL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: geo-ip-library.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: es\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: includes/admin.php:53 includes/admin.php:91
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: includes/admin.php:54
 #, php-format
 msgid "UPDATE AVAILABLE IN %d %s"
-msgstr ""
+msgstr "ACTUALIZACIÓN DISPONIBLE EN %d %s"
 
 #: includes/admin.php:55
 msgid "HOUR"
-msgstr ""
+msgstr "HORA"
 
 #: includes/admin.php:56
 msgid "HOURS"
-msgstr ""
+msgstr "HORAS"
 
 #: includes/admin.php:57
 msgid ""
-"Something went wrong while attempting to download from source. Try again "
+"Something went wrong while attempting to download from the source. Try again "
 "later."
 msgstr ""
+"Algo pasó mientras se intentaba descargar desde el origen. Inténtalo de "
+"nuevo más tarde."
 
 #: includes/admin.php:58
 msgid "It seems that source library is updating itself, give it a try later."
 msgstr ""
+"Al parecer la librería se está actualizando en el origen, inténtalo más "
+"tarde."
 
 #: includes/admin.php:59
 msgid ""
-"There was something weird while trying to unzip the source file. Try again "
-"in a few minutes."
+"There was something weird while attempting to unzip the source file. Try "
+"again in a few minutes."
 msgstr ""
+"Algo extraño sucedió mientras se intentaba descomprimir la librería "
+"descargada. Inténtalo de nuevo en unos minutos."
 
 #: includes/admin.php:60
 msgid ""
-"Huh! The library source was suppose to be found, but is not! Check for "
+"Huh! The library source was suppose to be here, but is not! Check for "
 "writing and reading permissions and try it again."
 msgstr ""
+"¡Oh, no! Se supone que la librería debería estar aquí, ¡Pero no lo está! "
+"Revisa los permisos de lectura y escritura del servidor e inténtalo de nuevo."
 
 #. Plugin Name of the plugin/theme
-#: includes/admin.php:97
+#: includes/admin.php:74 includes/admin.php:75 includes/admin.php:97
 msgid "Geo IP Library"
 msgstr "Librería Geo IP"
 
 #: includes/admin.php:98
 #, php-format
 msgid "source library by %s"
-msgstr ""
+msgstr "librería de origen por %s"
 
 #: includes/admin.php:99
 #, php-format
 msgid "scraping by %s"
-msgstr ""
+msgstr "scraping por %s"
 
 #: includes/admin.php:100
 msgid "Source"
-msgstr ""
+msgstr "Origen"
 
 #: includes/admin.php:101
 msgid "Latest update"
-msgstr ""
+msgstr "Última actualización"
 
 #: includes/admin.php:105
 msgid "UPDATE NOW"
-msgstr ""
+msgstr "ACTUALIZAR AHORA"
 
 #: includes/admin.php:106
 msgid "Library size"
-msgstr ""
+msgstr "Tamaño de librería"
 
 #: includes/admin.php:108
 msgid "PHP Version"
-msgstr ""
+msgstr "Versión de PHP"
 
 #: includes/admin.php:110
 msgid "Shortcode"
-msgstr ""
+msgstr "Shortcode"
 
 #: includes/admin.php:111
 #, php-format
 msgid ""
-"Display different contents for each country (or countries) within posts and "
+"Display different content for each country (or countries) within posts and "
 "pages by using %s or %s tags. To do magic, use the following syntax:"
 msgstr ""
 
@@ -208,7 +216,7 @@ msgid "Everything works like a charm!"
 msgstr ""
 
 #: includes/admin.php:133
-msgid "OK, you're the best!"
+msgid "Great!"
 msgstr ""
 
 #: includes/admin.php:134
@@ -221,11 +229,11 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Provides several PHP geolocation functions and shortcodes by using <a href="
-"\"http://chir.ag/projects/geoiploc/\">Chir's geolocation library</a>."
+"Provides simple country location features by using <a href=\"http://chir.ag/"
+"projects/geoiploc/\">Chir's geolocation library</a>."
 msgstr ""
-"Provee varias funciones PHP de geolocalización usando la <a href=\"http://"
-"chir.ag/projects/geoiploc/\">librería de geolocalización de Chir</a>"
+"Provee funciones de localización simples usando la <a href=\"http://chir.ag/"
+"projects/geoiploc/\">librería de geolocalización de Chir</a>."
 
 #. Author of the plugin/theme
 msgid "<a href=\"http://ricardomiguel.cl\">Ricardo Miguel</a>."
