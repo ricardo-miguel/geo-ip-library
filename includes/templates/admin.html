@@ -1,36 +1,45 @@
 <div class="gil-wrapper">
     <div class="gil-block gil-center">
-        <h1>Geo IP Library</h1>
+        <h1>{GEO_IP_LIBRARY}</h1>
     </div>
-    <p class="gil-by">source by <a href="//chir.ag/projects/geoiploc/">Chirag Mehta</a> | scrapped by <a href="//ricardomiguel.cl">Ricardo Miguel</a> | version {plugin_version}</p>
+    <p class="gil-by">{SOURCE_LIBRARY_BY} | {SCRAPING_BY}</p>
     <div class="gil-block">
-        <h2>Source</h2>
+        <h2>{SOURCE}</h2>
         <table>
             <tr>
-                <td>Latest update</td><td><time class="time-ago" datetime="{latest_update}">{string_latest_update}</time> <a class="update" href="#" diff="{diff_update}">[ <span class="dashicons dashicons-update" style="margin-top: -0.1em"></span> UPDATE NOW ]</a></td>
+                <td>{LATEST_UPDATE}</td>
+                <td>
+                    <time class="time-ago" datetime="{LATEST_UPDATE_DATE}">{LATEST_UPDATE_STRING}</time> 
+                    <a class="update" href="#" diff="{DIFF_UPDATE}">[ <span class="dashicons dashicons-update" style="margin-top: -0.1em"></span> {UPDATE_NOW} ]</a>
+                </td>
             </tr>
             <tr>
-                <td>Size</td><td class="gil-size">{file_size}</td>
+                <td>{SIZE}</td>
+                <td class="gil-size">{FILE_SIZE}</td>
             </tr>
             <tr>
-                <td>Required PHP version</td><td>>= 5.3</td>
-            </tr>
-            <tr>
-                <td>Server PHP version</td><td>{php_version}</td>
+                <td>{PHP_VERSION}</td>
+                <td>{PHP_VERSION_FUNC}</td>
             </tr>
         </table>
     </div>
     <div class="gil-block">
-        <h2>Shortcode</h2>
-        <p>Display different contents within posts and pages under specified country or countries when using [geo-ip-library] or [geo] tags. The available syntaxes are:</p>
+        <h2>{SHORTCODE}</h2>
+        <p>{SHORTCODE_DESCRIPTION}</p>
         <table class="gil-function">
             <tr>
-                <td class="name"><span style="color: #369">[geo-ip-library country<span style="color: #936">="</span><span style="color: #693">{2-digit country [, other countries]}</span><span style="color: #936">"</span>]<span style="color: #666">{plain text, HTML and/or shortcodes}</span>[/geo-ip-library]</span></td><td class="return">SYNTAX</td>
+                <td class="name">
+                    <span style="color: #369">[geo-ip-library country<span style="color: #936">="</span>
+                    <span style="color: #693">{SYNTAX_CONTENT}</span><span style="color: #936">"</span>]
+                    <span style="color: #666">{plain text, HTML and/or shortcodes}</span>[/geo-ip-library]</span>
+                </td>
+                <td class="return">SYNTAX</td>
             </tr>
         </table>
         <table class="gil-function">
             <tr>
-                <td class="name"><span style="color: #369">[geo country<span style="color: #936">="</span><span style="color: #693">{2-digit country [, other countries]}</span><span style="color: #936">"</span>]<span style="color: #666">{plain text, HTML and/or shortcodes}</span>[/geo]</span></td><td class="return">SYNTAX</td>
+                <td class="name">
+                    <span style="color: #369">[geo country<span style="color: #936">="</span><span style="color: #693">{SYNTAX_CONTENT}</span><span style="color: #936">"</span>]<span style="color: #666">{plain text, HTML and/or shortcodes}</span>[/geo]</span></td><td class="return">SYNTAX</td>
             </tr>
         </table>
         <p>A few usage examples:</p>

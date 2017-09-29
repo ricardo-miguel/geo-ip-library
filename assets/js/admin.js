@@ -146,6 +146,9 @@
         });
     }
 
+    /**
+     * Check for update availability due to interval restriction
+     */
     function update_availability() {
         var update_diff = $('.update').attr('diff');
         if(update_diff == '' || update_diff >= update_interval) {
@@ -155,7 +158,7 @@
         } else {
             var remain = update_interval - update_diff;
             var hours  = (remain == 1) ? 'HOUR' : 'HOURS';
-            $('.update').hide().after('<span class="remain">[ UPDATE AVAILABLE IN ' + remain + ' ' + hours + ' ]</span>');
+            $('.update').after('<span class="remain">[ UPDATE AVAILABLE IN ' + remain + ' ' + hours + ' ]</span>').remove();
         }
     }
 

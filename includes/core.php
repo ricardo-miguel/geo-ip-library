@@ -11,34 +11,36 @@
     * modify if is not really necessary.          *
     * * * * * * * * * * * * * * * * * * * * * * * */
 
-    require(GILPATH . 'includes/scraper.php');
-    require(GILPATH . 'includes/shortcode.php');
-    require(GILPATH . 'includes/admin.php');
+    require(GEO_IP_LIBRARY_PATH . 'includes/scraper.php');
+    require(GEO_IP_LIBRARY_PATH . 'includes/shortcode.php');
+    require(GEO_IP_LIBRARY_PATH . 'includes/admin.php');
 
     if(!function_exists('getCountryFromIP'))
-        require(GILPATH . 'lib/geoiploc.php');
+        require(GEO_IP_LIBRARY_PATH . 'lib/geoiploc.php');
 
     class GeoIPLibrary {
 
         /**
          * Loads all needed plugin classes and/or components
          *
-         * @return void
+         * @since   0.0.1
+         * @return  void
          */
-        function run() {
+        function init() {
             $scraper = new GeoIPLibraryScraper();
-            $scraper->run();
+            $scraper->init();
 
             $shortcode = new GeoIPLibraryShortcode();
-            $shortcode->run();
+            $shortcode->init();
 
             $admin = new GeoIPLibraryAdmin();
-            $admin->run();
+            $admin->init();
         }
 
         /**
          * Return current client IP address. Bypassing proxies, forwarding and network masks.
          *
+         * @since 0.0.1
          * @return string
          */
         public static function get_client_address() {
@@ -61,8 +63,9 @@
         /**
          * Returns current or specified client country ISO 3166-1 alpha-2 code
          *
-         * @param string $ip IP address
-         * @return void
+         * @since   0.0.2
+         * @param   string  $ip IP address
+         * @return  void
          */
         public static function get_client_country_code($ip = '') {
             if(empty($ip))
@@ -74,8 +77,9 @@
         /**
          * Returns current or specified client country name
          *
-         * @param string $ip IP address
-         * @return void
+         * @since   0.0.2
+         * @param   string  $ip IP address
+         * @return  void
          */
         public static function get_client_country_name($ip = '') {
             if(empty($ip))
