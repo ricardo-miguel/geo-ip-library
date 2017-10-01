@@ -1,4 +1,5 @@
 <?php
+
     /**
      * HTMLizer
      * This script allows to include html files as templates with
@@ -10,6 +11,7 @@
      * @license GPLv3 https://www.gnu.org/licenses/gpl-3.0-standalone.html
      * @link    http://ricardomiguel.cl/scripts/htmlizer
      */
+
     class HTMLizer {
 
         /**
@@ -61,4 +63,5 @@
             return $this->build($html_string, $vars);
         }
     }
+
 ?>

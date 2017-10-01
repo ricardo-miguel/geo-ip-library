@@ -4,8 +4,9 @@
     * Plugin Name: Geo IP Library
     * Plugin URI: http://ricardomiguel.cl/projects/geo-ip-library
     * Description: Provides simple country location features by using <a href="http://chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
-    * Version: 0.8.9
-    * Author: <a href="http://ricardomiguel.cl">Ricardo Miguel</a>.
+    * Version: 0.9.1
+    * Author: Ricardo Miguel
+    * Author URI: http://ricardomiguel.cl
     * Text Domain: geo-ip-library
     * Domain Path: /languages
     * License: GPLv3
@@ -28,28 +29,39 @@
     
     /**
      * Avoid direct file access
+     * 
+     * @since   0.1
      */
     defined('ABSPATH') or die('No script kiddies, please!');
 
     /**
      * Set current version
+     * 
+     * @since   0.1
      */
-    define('GEO_IP_LIBRARY_VERSION', '0.8.9');
+    define('GEO_IP_LIBRARY_VERSION', '0.9.1');
 
     /**
      * Set common constants
+     * 
+     * @since   0.1
      */
     define('GEO_IP_LIBRARY_URL', plugin_dir_url(__FILE__));
     define('GEO_IP_LIBRARY_PATH', plugin_dir_path(__FILE__));
+    define('GEO_IP_LIBRARY_DIR', basename(dirname(__FILE__)));
 
     /**
      * Load plugin core
+     * 
+     * @since   0.1
      */
     require(GEO_IP_LIBRARY_PATH . 'includes/core.php');
     
     /**
      * Initializes plugin
-     * @return void
+     * 
+     * @since   0.1
+     * @return  void
      */
     function geo_ip_library_init() {
         $geo_ip_library = new GeoIPLibrary();

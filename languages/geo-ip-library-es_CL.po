@@ -1,15 +1,13 @@
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Geo IP Library\n"
-"POT-Creation-Date: 2017-09-29 16:46-0300\n"
-"PO-Revision-Date: 2017-09-29 16:47-0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2017-10-01 01:04-0300\n"
+"PO-Revision-Date: 2017-10-01 02:06-0300\n"
 "Language-Team: \n"
-"Language: es_CL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -18,10 +16,26 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: es_CL\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin.php:53 includes/admin.php:91
+#. Plugin Name of the plugin/theme
+#: includes/admin.php:75 includes/admin.php:76 includes/admin.php:99
+#: includes/shortcode.php:39 includes/shortcode.php:42
+msgid "Geo IP Library"
+msgstr "Librería Geo IP"
+
+#. Description of the plugin/theme
+msgid ""
+"Provides simple country location features by using <a href=\"http://chir.ag/"
+"projects/geoiploc/\">Chir's geolocation library</a>."
+msgstr ""
+"Provee funciones de localización simples usando la <a href=\"http://chir.ag/"
+"projects/geoiploc/\">librería de geolocalización de Chir</a>."
+
+#: includes/admin.php:53 includes/admin.php:93
 msgid "Never"
 msgstr "Nunca"
 
@@ -68,173 +82,175 @@ msgstr ""
 "¡Oh, no! Se supone que la librería debería estar aquí, ¡Pero no lo está! "
 "Revisa los permisos de lectura y escritura del servidor e inténtalo de nuevo."
 
-#. Plugin Name of the plugin/theme
-#: includes/admin.php:74 includes/admin.php:75 includes/admin.php:97
-msgid "Geo IP Library"
-msgstr "Librería Geo IP"
-
-#: includes/admin.php:98
+#: includes/admin.php:100
 #, php-format
 msgid "source library by %s"
-msgstr "librería de origen por %s"
+msgstr "archivo de origen por %s"
 
-#: includes/admin.php:99
+#: includes/admin.php:101
 #, php-format
 msgid "scraping by %s"
 msgstr "scraping por %s"
 
-#: includes/admin.php:100
+#: includes/admin.php:102
 msgid "Source"
 msgstr "Origen"
 
-#: includes/admin.php:101
+#: includes/admin.php:103
 msgid "Latest update"
 msgstr "Última actualización"
 
-#: includes/admin.php:105
+#: includes/admin.php:107
 msgid "UPDATE NOW"
 msgstr "ACTUALIZAR AHORA"
 
-#: includes/admin.php:106
+#: includes/admin.php:108
 msgid "Library size"
 msgstr "Tamaño de librería"
 
-#: includes/admin.php:108
+#: includes/admin.php:110
 msgid "PHP Version"
 msgstr "Versión de PHP"
 
-#: includes/admin.php:110
+#: includes/admin.php:112
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: includes/admin.php:111
+#: includes/admin.php:113
 #, php-format
 msgid ""
 "Display different content for each country (or countries) within posts and "
 "pages by using %s or %s tags. To do magic, use the following syntax:"
 msgstr ""
-
-#: includes/admin.php:112
-msgid "SYNTAX"
-msgstr ""
-
-#: includes/admin.php:113
-msgid "{2-digits country code [, other countries]}"
-msgstr ""
+"Muestra contenido distinto para cada país (o varios países) en entradas y "
+"páginas a través de las etiquetas %s o %s. Para que la magia suceda, usa la "
+"siguiente sintaxis:"
 
 #: includes/admin.php:114
-msgid "{plain text, HTML and/or shortcodes}"
-msgstr ""
+msgid "SYNTAX"
+msgstr "SINTÁXIS"
 
 #: includes/admin.php:115
-msgid "A few usage examples"
-msgstr ""
+msgid "{2-digits country code [, other countries]}"
+msgstr "{código país de 2 dígitos [, más países]}"
 
 #: includes/admin.php:116
-msgid "SINGLE COUNTRY"
-msgstr ""
+msgid "{plain text, HTML and/or shortcodes}"
+msgstr "{texto plano, HTML y/o shortcodes}"
 
 #: includes/admin.php:117
+msgid "A few usage examples"
+msgstr "Algunos ejemplos de uso"
+
+#: includes/admin.php:118
+msgid "SINGLE COUNTRY"
+msgstr "UN PAÍS"
+
+#: includes/admin.php:119
 #, php-format
 msgid ""
 "This will display %s to all visitors from USA. Others will not see anything "
 "at all."
 msgstr ""
+"Esto mostrará %s a todos los visitantes de Estados Unidos. Los demás no "
+"verán nada en absoluto."
 
-#: includes/admin.php:118
+#: includes/admin.php:120
 msgid "MULTIPLE COUNTRIES"
-msgstr ""
+msgstr "VARIOS PAÍSES"
 
-#: includes/admin.php:119
+#: includes/admin.php:121
 #, php-format
 msgid ""
 "This will display %s to all visitors from Chile, Spain and Mexico. Others "
 "will not see anything at all."
 msgstr ""
+"Esto mostrará %s a todos los visitantes de Chile, España y México. Los demás "
+"no verán nada en absoluto."
 
-#: includes/admin.php:120
+#: includes/admin.php:122
 msgid "You can also call other shortcodes inside:"
-msgstr ""
-
-#: includes/admin.php:121
-msgid "We're ready to go! See details below:"
-msgstr ""
-
-#: includes/admin.php:122 includes/admin.php:123
-msgid "[my-other-shortcode]"
-msgstr ""
+msgstr "También puedes usar otros shortcodes:"
 
 #: includes/admin.php:123
+msgid "We're ready to go! See details below:"
+msgstr "¡Estamos listos para comenzar! Los detalles a continuación:"
+
+#: includes/admin.php:124 includes/admin.php:125
+msgid "[my-other-shortcode]"
+msgstr "[mi-otro-shortcode]"
+
+#: includes/admin.php:125
 #, php-format
 msgid ""
 "This will display the content to all visitors from Canada and will process "
 "%s shortcode. Others will not see anything at all."
 msgstr ""
-
-#: includes/admin.php:124
-msgid "SHORTCODE-CEPTION"
-msgstr ""
-
-#: includes/admin.php:125
-msgid "Coding"
-msgstr ""
+"Esto mostrará el contenido a todos los visitantes de Canadá y procesará el "
+"shortcode %s. Los demás no verán nada en absoluto."
 
 #: includes/admin.php:126
-#, php-format
-msgid "The following static functions can be used anywhere along %s class:"
-msgstr ""
+msgid "SHORTCODE-CEPTION"
+msgstr "SHORTCODE-CEPCIÓN"
 
 #: includes/admin.php:127
+msgid "Coding"
+msgstr "Programación"
+
+#: includes/admin.php:128
+#, php-format
+msgid "The following static functions can be used anywhere along %s class:"
+msgstr "Las siguientes funciones estáticas pueden usarse junto a la clase %s:"
+
+#: includes/admin.php:129
 msgid ""
 "Returns the current client's IP address. It bypasses proxies and/or "
 "forwarding."
 msgstr ""
+"Retorna la dirección IP del cliente actual. Evita los proxis y/o "
+"redireccionamientos."
 
-#: includes/admin.php:128
+#: includes/admin.php:130
 #, php-format
 msgid ""
 "Returns the current client's %s country code or the specified at %s "
 "parameter."
 msgstr ""
+"Retorna el código %s de país del cliente actual o del especificado en el "
+"parámetro %s."
 
-#: includes/admin.php:129
+#: includes/admin.php:131
 #, php-format
 msgid ""
 "Returns the current client's country name or the specified at %s parameter."
 msgstr ""
-
-#: includes/admin.php:130
-msgid "Downloading library package"
-msgstr ""
-
-#: includes/admin.php:131
-msgid "Decompressing library file"
-msgstr ""
+"Retorna el nombre del país del cliente actual o del especificado en el "
+"parámetro %s."
 
 #: includes/admin.php:132
-msgid "Everything works like a charm!"
-msgstr ""
+msgid "Downloading library package"
+msgstr "Descargando archivo de librería"
 
 #: includes/admin.php:133
-msgid "Great!"
-msgstr ""
+msgid "Decompressing library file"
+msgstr "Descomprimiendo archivo de librería"
 
 #: includes/admin.php:134
+msgid "Everything works like a charm!"
+msgstr "¡Todo funcionó de maravilla!"
+
+#: includes/admin.php:135
+msgid "Great!"
+msgstr "¡Genial!"
+
+#: includes/admin.php:136
 msgid "For sure I will"
-msgstr ""
+msgstr "Por supuesto"
 
-#. Plugin URI of the plugin/theme
-msgid "http://ricardomiguel.cl/projects/geo-ip-library"
-msgstr ""
+#: includes/shortcode.php:39
+msgid "Country not specified."
+msgstr "No se ha especificado ningún país."
 
-#. Description of the plugin/theme
-msgid ""
-"Provides simple country location features by using <a href=\"http://chir.ag/"
-"projects/geoiploc/\">Chir's geolocation library</a>."
-msgstr ""
-"Provee funciones de localización simples usando la <a href=\"http://chir.ag/"
-"projects/geoiploc/\">librería de geolocalización de Chir</a>."
-
-#. Author of the plugin/theme
-msgid "<a href=\"http://ricardomiguel.cl\">Ricardo Miguel</a>."
-msgstr ""
+#: includes/shortcode.php:42
+msgid "No content found. Check for closing tag."
+msgstr "Sin contenido. Revisa el tag de cierre."

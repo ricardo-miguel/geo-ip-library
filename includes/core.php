@@ -23,7 +23,7 @@
         /**
          * Loads all needed plugin classes and/or components
          *
-         * @since   0.0.1
+         * @since   0.1
          * @return  void
          */
         function init() {
@@ -35,13 +35,25 @@
 
             $admin = new GeoIPLibraryAdmin();
             $admin->init();
+
+            $this->i18n();
+        }
+
+        /**
+         * Load text domain for i18n
+         *
+         * @since   0.8
+         * @return  void
+         */
+        function i18n() {
+            load_plugin_textdomain('geo-ip-library', false, GEO_IP_LIBRARY_DIR . '/languages/');
         }
 
         /**
          * Return current client IP address. Bypassing proxies, forwarding and network masks.
          *
-         * @since 0.0.1
-         * @return string
+         * @since   0.1
+         * @return  string
          */
         public static function get_client_address() {
             $client_address;
@@ -63,7 +75,7 @@
         /**
          * Returns current or specified client country ISO 3166-1 alpha-2 code
          *
-         * @since   0.0.2
+         * @since   0.2
          * @param   string  $ip IP address
          * @return  void
          */
@@ -77,7 +89,7 @@
         /**
          * Returns current or specified client country name
          *
-         * @since   0.0.2
+         * @since   0.2
          * @param   string  $ip IP address
          * @return  void
          */

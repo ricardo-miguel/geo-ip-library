@@ -21,7 +21,7 @@
          */
         function init() {
             add_action('current_screen', array($this, 'assets'));
-            add_action('admin_menu', array($this, 'menu'));            
+            add_action('admin_menu', array($this, 'menu'));
         }
 
         /**
@@ -38,7 +38,7 @@
                 wp_enqueue_script('geo-ip-library-timeago-script', GEO_IP_LIBRARY_URL . 'assets/js/jquery.timeago.js', 'jquery');
                 wp_enqueue_script('geo-ip-library-admin-script', GEO_IP_LIBRARY_URL . 'assets/js/admin.min.js', 'jquery');
 
-                $this->i10n_assets();
+                $this->l10n_assets();
             }
         }
 
@@ -48,8 +48,8 @@
          * @since   0.8
          * @return  void
          */
-        function i10n_assets() {
-            $i10n_geo_ip = array(
+        function l10n_assets() {
+            $l10n_geo_ip = array(
                 "NEVER"                => __('Never', 'geo-ip-library'),
                 "UPDATE_AVAILABLE_IN"  => __('UPDATE AVAILABLE IN %d %s', 'geo-ip-library'),
                 "HOUR"                 => __('HOUR', 'geo-ip-library'),
@@ -60,12 +60,13 @@
                 "EX_FILE_NOT_FOUND"    => __('Huh! The library source was suppose to be here, but is not! Check for writing and reading permissions and try it again.', 'geo-ip-library')
             );
 
-            wp_localize_script( 'geo-ip-library-admin-script', 'i10n_geo_ip', $i10n_geo_ip);
+            wp_localize_script( 'geo-ip-library-admin-script', 'l10n_geo_ip', $l10n_geo_ip);
         }
 
         /**
          * Defines how admin is shown at dashboard
          * 
+         * @since   0.5
          * @return  void
          */
         function menu() {
@@ -82,6 +83,7 @@
         /**
          * Settings page (mostly info)
          * 
+         * @since   0.5
          * @return  void
          */
         function settings() {
@@ -116,7 +118,7 @@
                 "SINGLE_COUNTRY"                 => __('SINGLE COUNTRY', 'geo-ip-library'),
                 "SINGLE_COUNTRY_DESCRIPTION"     => sprintf(__('This will display %s to all visitors from USA. Others will not see anything at all.', 'geo-ip-library'), '<i>Hello world!</i>'),
                 "MULTIPLE_COUNTRIES"             => __('MULTIPLE COUNTRIES', 'geo-ip-library'),
-                "MULTIPLE_COUNTRIES_DESCRIPTION" => sprintf(__('This will display %s to all visitors from Chile, Spain and Mexico. Others will not see anything at all.', 'geo-ip-location'), '<i>¡Hola mundo!</i>'),
+                "MULTIPLE_COUNTRIES_DESCRIPTION" => sprintf(__('This will display %s to all visitors from Chile, Spain and Mexico. Others will not see anything at all.', 'geo-ip-library'), '<i>¡Hola mundo!</i>'),
                 "OTHER_SHORTCODE"                => __('You can also call other shortcodes inside:', 'geo-ip-library'),
                 "OTHER_SHORTCODE_SYNTAX"         => __('We\'re ready to go! See details below:', 'geo-ip-library'),
                 "OTHER_SHORTCODE_TAG"            => __('[my-other-shortcode]', 'geo-ip-library'),

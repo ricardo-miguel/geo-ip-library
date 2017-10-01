@@ -20,7 +20,7 @@
          * @return  void
          */
         function init() {
-            add_shortcode('geo-ip-library', array($this, 'shortcode'));
+            add_shortcode('geo-ip', array($this, 'shortcode'));
             if(!shortcode_exists('geo'))
                 add_shortcode('geo', array($this, 'shortcode'));
         }
@@ -36,10 +36,10 @@
          */
         function shortcode($atts = [], $content = null) {
             if(empty($atts['country']))
-                return "<p><i><span style=\"font-weight: 600\">Geo IP Library:</span> Country not specified.</i></p>";
+                return "<p><i><b>" . __('Geo IP Library','geo-ip-library') . ":</b> " . __('Country not specified.', 'geo-ip-library') . "</i></p>";
 
             if(empty($content))
-                return "<p><i><span style=\"font-weight: 600\">Geo IP Library:</span> No content found. Check for closing tag.</i></p>";
+                return "<p><i><b>" . __('Geo IP Library','geo-ip-library') . ":</b> " . __('No content found. Check for closing tag.', 'geo-ip-library') . "</i></p>";
 
             $client_country = GeoIPLibrary::get_client_country_code();
             $country_sanitized = strtoupper(trim($atts['country']));
