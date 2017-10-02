@@ -12,6 +12,7 @@ Provides simple country location features for Wordpress.
 
 This plugin enables global static PHP functions in order to provide ip geolocation features for plugins and themes. Also, provides a shortcode to display contents by country.
 
+<br />
 
 ## Source library
 
@@ -23,6 +24,7 @@ The library was made by [Chirag Mehta](http://chir.ag/projects/geoiploc/) and it
 ### Updating library
 From admin dashboard (specifically under _Tools_ menu), the library can be updated without any risk.
 
+<br />
 
 ## Usage
 
@@ -30,11 +32,9 @@ From admin dashboard (specifically under _Tools_ menu), the library can be updat
 
 Display different content for each country (or countries) within posts and pages by using [geo-ip] or [geo] tags. To do magic, use the following syntax:
 
-```
+```php
 [geo-ip country="{2-digits country code [, other countries]}"]{plain text, HTML and/or shortcodes}[/geo-ip]
-```
-or
-```
+/* OR */
 [geo country="{2-digits country code [, other countries]}"]{plain text, HTML and/or shortcodes}[/geo]
 ```
 
@@ -43,13 +43,21 @@ or
 The following static functions can be used anywhere along GeoIPLibrary class:
 
 ```php
-// Returns the current client's IP address as STRING. It bypasses proxies and/or forwarding. Returns FALSE if it fails.
+/** Returns the current client's IP address as STRING. 
+  * It bypasses proxies and/or forwarding. 
+  * Returns FALSE if it fails. */
 GeoIPLibrary::get_client_address()
 
-// Returns the current client's ISO 3166-1 alpha-2 country code or the specified at $ip parameter as STRING. Returns FALSE if it fails.
+/** Returns the current client's ISO 3166-1 alpha-2 country code 
+  * or the specified at $ip parameter as STRING. 
+  * Returns FALSE if it fails. */
 GeoIPLibrary::get_client_country_code(string $ip = '')
 
-// Returns the current client's country name or the specified at $ip parameter as STRING. Returns FALSE if it fails.
+/** Returns the current client's country name 
+  * or the specified at $ip parameter as STRING. 
+  * Returns FALSE if it fails. */
 GeoIPLibrary::get_client_country_name(string $ip = '')
-
 ```
+
+# Contributions
+Geo IP Library is still in development, but currently stable. You can contribute with new ideas, coding improves/issues and even grammar/spelling check (english is not my mother language).
