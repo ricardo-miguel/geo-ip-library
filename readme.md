@@ -34,7 +34,9 @@ Display different content for each country (or countries) within posts and pages
 
 ```php
 [geo-ip country="{2-digits country code [, other countries]}"]{plain text, HTML and/or shortcodes}[/geo-ip]
+
 /* OR */
+
 [geo country="{2-digits country code [, other countries]}"]{plain text, HTML and/or shortcodes}[/geo]
 ```
 
