@@ -91,6 +91,15 @@
             });
             return false;
         });
+        $('.geo-ip-about').on('click', function() {
+            $('.geo-ip-about-wrapper').fadeIn(fade).css('display', 'table');
+            return false;
+        });
+
+        $('.geo-ip-about-wrapper').on('click', function(e) {
+            if($(e.target).hasClass('geo-ip-about-content'))
+                $(this).fadeOut(fade);
+        });
     });
 
     /**

@@ -2,18 +2,19 @@
     <div class="geo-ip-block geo-ip-center">
         <h1>{GEO_IP_LIBRARY}</h1>
     </div>
-    <p class="geo-ip-by">{SOURCE_LIBRARY_BY} | {SCRAPING_BY}</p>
+    <p></p>
     <div class="geo-ip-block">
         <h2>{SOURCE}</h2>
+        <a class="geo-ip-about" href="#">(What's this?)</a>
         <table>
             <tr>
                 <td>{LATEST_UPDATE}</td>
                 <td>
                     <time class="time-ago" datetime="{LATEST_UPDATE_DATE}">{LATEST_UPDATE_STRING}</time>
                     <a class="update" href="#" diff="{DIFF_UPDATE}">
-                        [<span>&nbsp;</span>
+                        [
                         <span class="dashicons dashicons-update" style="margin-top: -0.1em"></span>
-                        <span>&nbsp;</span>{UPDATE_NOW}<span>&nbsp;</span>]
+                        {UPDATE_NOW}]
                     </a>
                 </td>
             </tr>
@@ -33,13 +34,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo-ip country</span>
-                    <span style="color: #936">="</span>
-                    <span style="color: #693">{SYNTAX_COUNTRY}</span>
-                    <span style="color: #936">"</span>
-                    <span style="color: #369">]</span>
-                    <span style="color: #666">{SYNTAX_CONTENT}</span>
-                    <span style="color: #369">[/geo-ip]</span>
+                    <span style="color: #369">[geo-ip country</span><span style="color: #936">="</span><span style="color: #693">{SYNTAX_COUNTRY}</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{SYNTAX_CONTENT}</span><span style="color: #369">[/geo-ip]</span>
                 </td>
                 <td class="return">{SYNTAX}</td>
             </tr>
@@ -47,13 +42,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span>
-                    <span style="color: #936">="</span>
-                    <span style="color: #693">{SYNTAX_COUNTRY}</span>
-                    <span style="color: #936">"</span>
-                    <span style="color: #369">]</span>
-                    <span style="color: #666">{SYNTAX_CONTENT}</span>
-                    <span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">{SYNTAX_COUNTRY}</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{SYNTAX_CONTENT}</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td class="return">{SYNTAX}</td>
             </tr>
@@ -62,13 +51,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span>
-                    <span style="color: #936">="</span>
-                    <span style="color: #693">US</span>
-                    <span style="color: #936">"</span>
-                    <span style="color: #369">]</span>
-                    <span style="color: #666">Hello world!</span>
-                    <span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">US</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">Hello world!</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td rowspan="2" class="return">{SINGLE_COUNTRY}</td>
             </tr>
@@ -79,13 +62,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span>
-                    <span style="color: #936">="</span>
-                    <span style="color: #693">CL,ES,MX</span>
-                    <span style="color: #936">"</span>
-                    <span style="color: #369">]</span>
-                    <span style="color: #666">¡Hola mundo!</span>
-                    <span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">CL,ES,MX</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">¡Hola mundo!</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td rowspan="2" class="return">{MULTIPLE_COUNTRIES}</td>
             </tr>
@@ -97,15 +74,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span>
-                    <span style="color: #936">="</span>
-                    <span style="color: #693">CA</span>
-                    <span style="color: #936">"</span>
-                    <span style="color: #369">]</span>
-                    <span style="color: #666">{OTHER_SHORTCODE_SYNTAX}</span>
-                    <span>&nbsp;</span>
-                    <span style="color: #755">{OTHER_SHORTCODE_TAG}</span>
-                    <span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">CA</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{OTHER_SHORTCODE_SYNTAX}</span><span style="color: #755">{OTHER_SHORTCODE_TAG}</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td rowspan="2" class="return">{SHORTCODE_CEPTION}</td>
             </tr>
@@ -128,14 +97,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">get_client_country_code</span>
-                    <span>(</span>
-                    <span style="color: #693">string</span>
-                    <span>&nbsp;</span>
-                    <span style="color: #369">$ip</span>
-                    <span>&nbsp;</span>
-                    <span style="color: #936">= ''</span>
-                    <span>)</span>
+                    <span style="color: #369">get_client_country_code</span><span>(</span><span style="color: #693">string</span><span style="color: #369">$ip</span><span style="color: #936">= ''</span><span>)</span>
                 </td>
             </tr>
             <tr>
@@ -145,14 +107,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">get_client_country_name</span>
-                    <span>(</span>
-                    <span style="color: #693">string</span>
-                    <span>&nbsp;</span>
-                    <span style="color: #369">$ip</span>
-                    <span>&nbsp;</span>
-                    <span style="color: #936">= ''</span>
-                    <span>)</span>
+                    <span style="color: #369">get_client_country_name</span><span>(</span><span style="color: #693">string</span><span style="color: #369">$ip</span><span style="color: #936">= ''</span><span>)</span>
                 </td>
             </tr>
             <tr>
@@ -177,10 +132,47 @@
                 </div>
             </div>
         <div class="process">
-            <div class="downloading">{DOWNLOADING}<span class="ellipsis-anim"><span>&nbsp;</span><span>.</span><span>.</span><span>.</span></span></div>
-            <div class="decompressing">{DECOMPRESSING}<span>&nbsp;</span><span class="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span></div>
+            <div class="downloading">{DOWNLOADING} <span class="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span></div>
+            <div class="decompressing">{DECOMPRESSING} <span class="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span></div>
             <div class="done">{DONE}<br /><a class="geo-ip-button geo-ip-close" href="#">{OK_BUTTON}</a></div>
             <div class="failure"><div class="exception"></div><br /><a class="geo-ip-button geo-ip-close" href="#">{ERROR_BUTTON}</a></div>
+        </div>
+    </div>
+</div>
+<div class="geo-ip-about-wrapper">
+    <div class="geo-ip-about-content">
+        <div class="container">
+            <h2>About the library</h2>
+            <p>
+                Geo IP Library (as the name suggests) uses a standalone Geolocation IP library, but it comes from a third-party source.
+                In simple words, this plugin includes a single PHP file that will let you determine the country of location for any given IP address
+                without depending of external web services and PHP dependencies.
+            </p>
+            <p>
+                The remote source is automatically updated once a day by downloading the free IP address database from Software77.net;
+                so, you can easily update your local library from the source by pressing <code>[<span class="dashicons dashicons-update"></span> UPDATE NOW]</code> at Geo IP Library's admin page. 
+            </p>
+            <p>
+                Update process consists in downloading and decompressing an updated library file from: <code>http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz</code>, then replacing the current local one.
+            </p>
+            <p>
+                The source project itself is named <i>"php geoiplocation library - ip address to country"</i> and was made by Chirag Mehta.
+                For more information, see below:
+            </p>
+            <table class="more-info">
+                <tr>
+                    <td><code>[LIBRARY]</code> <a href="http://chir.ag/">Author site</a></td>
+                    <td><code>[PLUGIN]</code> <a href="http://ricardomiguel.cl/">Author site</a></td>
+                </tr>
+                <tr>
+                    <td><code>[LIBRARY]</code> <a href="http://chir.ag/projects/geoiploc/">Project site</a></td>
+                    <td><code>[PLUGIN]</code> <a href="http://ricardomiguel.cl/projects/geo-ip-library">Project site</a></td>
+                </tr>
+                <tr>
+                    <td><code>[LIBRARY]</code> <a href="http://software77.net/geo-ip/">Software77.net geoip database site</a></td>
+                    <td><code>[PLUGIN]</code> <a href="https://github.com/ricardo-miguel/geo-ip-library">Git repository</a></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

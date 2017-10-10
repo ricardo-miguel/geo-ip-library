@@ -3,7 +3,11 @@ $prefix: 'geo-ip';
 .#{$prefix} { }
 
 .#{$prefix}-wrapper, 
-.#{$prefix}-wrapper * { box-sizing: border-box; }
+.#{$prefix}-wrapper *,
+.#{$prefix}-update-wrapper, 
+.#{$prefix}-update-wrapper *,
+.#{$prefix}-about-wrapper, 
+.#{$prefix}-about-wrapper * { box-sizing: border-box; }
 
 .#{$prefix}-wrapper {
     display: block;
@@ -14,6 +18,7 @@ $prefix: 'geo-ip';
 
 .#{$prefix}-block {
     display: inline-block;
+    position: relative;
     width: 100%;
     background-color: #FFF;
     padding: 1.5em;
@@ -66,6 +71,13 @@ $prefix: 'geo-ip';
     margin-top: 0em;
 }
 
+.#{$prefix}-about {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    font-size: 90%;
+}
+
 .#{$prefix}-button {
     display: inline-block;
     background-color: #0073AA;
@@ -107,7 +119,8 @@ $prefix: 'geo-ip';
     .#{$prefix}-function .name,
     .#{$prefix}-function .return { font-family: "Lucida Console", Monaco, monospace; }
 
-.#{$prefix}-update-wrapper {
+.#{$prefix}-update-wrapper,
+.#{$prefix}-about-wrapper  {
     display: none;
     position: fixed;
     top: 0;
@@ -118,7 +131,8 @@ $prefix: 'geo-ip';
     z-index: 99999;
 }
 
-    .#{$prefix}-update-wrapper .#{$prefix}-update-content {
+    .#{$prefix}-update-wrapper .#{$prefix}-update-content,
+    .#{$prefix}-about-wrapper .#{$prefix}-about-content {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
@@ -128,7 +142,7 @@ $prefix: 'geo-ip';
 
         .#{$prefix}-update-wrapper .process {
             display: inline-block;
-            max-width: 500px;
+            max-width: 510px;
             width: 100%;
             margin-top: 2em;
             height: 128px;
@@ -143,6 +157,33 @@ $prefix: 'geo-ip';
                 font-size: 24pt;
                 transform: translate3d(0, 40px, 0);
                 transition: transform 0.4s ease-out;
+            }
+
+        .#{$prefix}-about-wrapper .container {
+            display: inline-block;
+            width: 510px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 4px 0px #D6D6D6;
+            padding: 1.5em;
+        }
+
+            .#{$prefix}-about-wrapper .container p { text-align: justify; }
+
+            .#{$prefix}-about-wrapper .container h2 {
+                font-size: 180%;
+                margin-top: 0;
+            }
+
+            .#{$prefix}-about-wrapper .container .dashicons { 
+                vertical-align: middle;
+                font-size: 100%;
+                width: auto;
+                height: auto;
+            }
+
+            .#{$prefix}-about-wrapper .container .more-info {
+                width: 100%;
+                text-align: left;
             }
 
 /* Ellipsis animation */

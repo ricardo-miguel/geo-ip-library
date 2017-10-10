@@ -1,5 +1,9 @@
 .geo-ip-wrapper,
-.geo-ip-wrapper * {
+.geo-ip-wrapper *,
+.geo-ip-update-wrapper,
+.geo-ip-update-wrapper *,
+.geo-ip-about-wrapper,
+.geo-ip-about-wrapper * {
   box-sizing: border-box;
 }
 
@@ -12,6 +16,7 @@
 
 .geo-ip-block {
   display: inline-block;
+  position: relative;
   width: 100%;
   background-color: #FFF;
   padding: 1.5em;
@@ -70,6 +75,13 @@
   margin-top: 0em;
 }
 
+.geo-ip-about {
+  position: absolute;
+  top: 20px;
+  right: 17px;
+  font-size: 90%;
+}
+
 .geo-ip-button {
   display: inline-block;
   background-color: #0073AA;
@@ -117,7 +129,8 @@
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-.geo-ip-update-wrapper {
+.geo-ip-update-wrapper,
+.geo-ip-about-wrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -128,7 +141,8 @@
   z-index: 99999;
 }
 
-.geo-ip-update-wrapper .geo-ip-update-content {
+.geo-ip-update-wrapper .geo-ip-update-content,
+.geo-ip-about-wrapper .geo-ip-about-content {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -140,7 +154,7 @@
 
 .geo-ip-update-wrapper .process {
   display: inline-block;
-  max-width: 500px;
+  max-width: 510px;
   width: 100%;
   margin-top: 2em;
   height: 128px;
@@ -155,6 +169,35 @@
   font-size: 24pt;
   transform: translate3d(0, 40px, 0);
   transition: transform 0.4s ease-out;
+}
+
+.geo-ip-about-wrapper .container {
+  display: inline-block;
+  width: 510px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 4px 0px #D6D6D6;
+  padding: 1.5em;
+}
+
+.geo-ip-about-wrapper .container p {
+  text-align: justify;
+}
+
+.geo-ip-about-wrapper .container h2 {
+  font-size: 180%;
+  margin-top: 0;
+}
+
+.geo-ip-about-wrapper .container .dashicons {
+  vertical-align: middle;
+  font-size: 100%;
+  width: auto;
+  height: auto;
+}
+
+.geo-ip-about-wrapper .container .more-info {
+  width: 100%;
+  text-align: left;
 }
 
 /* Ellipsis animation */
