@@ -5,16 +5,14 @@
     <p></p>
     <div class="geo-ip-block">
         <h2>{SOURCE}</h2>
-        <a class="geo-ip-about" href="#">(What's this?)</a>
+        <a class="geo-ip-about" href="#">{WHATS_THIS}</a>
         <table>
             <tr>
                 <td>{LATEST_UPDATE}</td>
                 <td>
                     <time class="time-ago" datetime="{LATEST_UPDATE_DATE}">{LATEST_UPDATE_STRING}</time>
                     <a class="update" href="#" diff="{DIFF_UPDATE}">
-                        [
-                        <span class="dashicons dashicons-update" style="margin-top: -0.1em"></span>
-                        {UPDATE_NOW}]
+                        [ <span class="dashicons dashicons-update" style="margin-top: -0.1em"></span> {UPDATE_NOW} ]
                     </a>
                 </td>
             </tr>
@@ -142,30 +140,18 @@
 <div class="geo-ip-about-wrapper">
     <div class="geo-ip-about-content">
         <div class="container">
-            <h2>About the library</h2>
-            <p>
-                Geo IP Library (as the name suggests) uses a standalone Geolocation IP library, but it comes from a third-party source.
-                In simple words, this plugin includes a single PHP file that will let you determine the country of location for any given IP address
-                without depending of external web services and PHP dependencies.
-            </p>
-            <p>
-                The remote source is automatically updated once a day by downloading the free IP address database from Software77.net;
-                so, you can easily update your local library from the source by pressing <code>[<span class="dashicons dashicons-update"></span> UPDATE NOW]</code> at Geo IP Library's admin page. 
-            </p>
-            <p>
-                Update process consists in downloading and decompressing an updated library file from: <code>http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz</code>, then replacing the current local one.
-            </p>
-            <p>
-                The source project itself is named <i>"php geoiplocation library - ip address to country"</i> and was made by Chirag Mehta.
-                For more information, see below:
-            </p>
+            <h2>{ABOUT_LIBRARY}</h2>
+            <p>{ABOUT_S1} {ABOUT_S2}</p>
+            <p>{ABOUT_S3}</p>
+            <p>{ABOUT_S4}</p>
+            <p>{ABOUT_S5}</p>
             <table class="more-info">
                 <tr>
-                    <td><code>[LIBRARY]</code> <a href="http://chir.ag/">Author site</a></td>
-                    <td><code>[PLUGIN]</code> <a href="http://ricardomiguel.cl/">Author site</a></td>
+                    <td><code>[LIBRARY]</code> <a href="http://chir.ag/">{AUTHOR_SITE}</a></td>
+                    <td><code>[PLUGIN]</code> <a href="http://ricardomiguel.cl/">{AUTHOR_SITE}</a></td>
                 </tr>
                 <tr>
-                    <td><code>[LIBRARY]</code> <a href="http://chir.ag/projects/geoiploc/">Project site</a></td>
+                    <td><code>[LIBRARY]</code> <a href="http://chir.ag/projects/geoiploc/">{PROJECT_SITE}</a></td>
                     <td><code>[PLUGIN]</code> <a href="http://ricardomiguel.cl/projects/geo-ip-library">Project site</a></td>
                 </tr>
                 <tr>

@@ -97,9 +97,8 @@
 
             $vars = array(
                 "GEO_IP_LIBRARY"                 => __('Geo IP Library', 'geo-ip-library'),
-                "SOURCE_LIBRARY_BY"              => sprintf(__('source library by %s', 'geo-ip-library'), '<a href="//chir.ag/projects/geoiploc/">Chirag Mehta</a>'),
-                "SCRAPING_BY"                    => sprintf(__('scraping by %s', 'geo-ip-library'), '<a href="//ricardomiguel.cl">Ricardo Miguel</a>'),
                 "SOURCE"                         => __('Source', 'geo-ip-library'),
+                "WHATS_THIS"                     => __('(What\'s this?)', 'geo-ip-library'),
                 "LATEST_UPDATE"                  => __('Latest update', 'geo-ip-library'),
                 "LATEST_UPDATE_DATE"             => $latest_update,
                 "LATEST_UPDATE_STRING"           => $string_latest_update,
@@ -133,7 +132,13 @@
                 "DECOMPRESSING"                  => __('Decompressing library file', 'geo-ip-library'),
                 "DONE"                           => __('Everything works like a charm!', 'geo-ip-library'),
                 "OK_BUTTON"                      => __('Great!', 'geo-ip-library'),
-                "ERROR_BUTTON"                   => __('For sure I will', 'geo-ip-library')
+                "ERROR_BUTTON"                   => __('For sure I will', 'geo-ip-library'),
+                "ABOUT_LIBRARY"                  => __('About the library', 'geo-ip-library'),
+                "ABOUT_S1"                       => __('Geo IP Library (as the name suggests) uses a standalone Geolocation IP library, but it comes from a third-party source.', 'geo-ip-library'),
+                "ABOUT_S2"                       => __('In simple words, this plugin includes a single PHP file that will let you determine the country of location for any given IP address without depending of external web services and PHP dependencies.', 'geo-ip-library'),
+                "ABOUT_S3"                       => sprintf(__('The remote source is automatically updated once a day by downloading the free IP address database from Software77.net; so, you can easily update your local library from the source by pressing %s at Geo IP Library\'s admin page.', 'geo-ip-library'), '<code>[<span class="dashicons dashicons-update"></span> ' . __('UPDATE NOW', 'geo-ip-library') .']</code>'),
+                "ABOUT_S4"                       => sprintf(__('Update process consists in downloading and decompressing an updated library file from: %s, then replacing the current local one.', 'geo-ip-library'), '<code>http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz</code>'),
+                "ABOUT_S5"                       => sprintf(__('The source project itself is named %s and was made by Chirag Mehta. For more information, see below:', 'geo-ip-library'), '<i>"php geoiplocation library - ip address to country"</i>')
             );
 
             $HTMLizer = new HTMLizer();
