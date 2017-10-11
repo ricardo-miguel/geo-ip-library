@@ -82,6 +82,10 @@
   font-size: 90%;
 }
 
+.geo-ip-about:hover {
+  cursor: help;
+}
+
 .geo-ip-button {
   display: inline-block;
   background-color: #0073AA;

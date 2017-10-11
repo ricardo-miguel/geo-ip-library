@@ -78,6 +78,8 @@ $prefix: 'geo-ip';
     font-size: 90%;
 }
 
+    .#{$prefix}-about:hover { cursor: help; }
+
 .#{$prefix}-button {
     display: inline-block;
     background-color: #0073AA;

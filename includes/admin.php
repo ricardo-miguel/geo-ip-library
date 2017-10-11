@@ -137,8 +137,12 @@
                 "ABOUT_S1"                       => __('Geo IP Library (as the name suggests) uses a standalone Geolocation IP library, but it comes from a third-party source.', 'geo-ip-library'),
                 "ABOUT_S2"                       => __('In simple words, this plugin includes a single PHP file that will let you determine the country of location for any given IP address without depending of external web services and PHP dependencies.', 'geo-ip-library'),
                 "ABOUT_S3"                       => sprintf(__('The remote source is automatically updated once a day by downloading the free IP address database from Software77.net; so, you can easily update your local library from the source by pressing %s at Geo IP Library\'s admin page.', 'geo-ip-library'), '<code>[<span class="dashicons dashicons-update"></span> ' . __('UPDATE NOW', 'geo-ip-library') .']</code>'),
-                "ABOUT_S4"                       => sprintf(__('Update process consists in downloading and decompressing an updated library file from: %s, then replacing the current local one.', 'geo-ip-library'), '<code>http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz</code>'),
-                "ABOUT_S5"                       => sprintf(__('The source project itself is named %s and was made by Chirag Mehta. For more information, see below:', 'geo-ip-library'), '<i>"php geoiplocation library - ip address to country"</i>')
+                "ABOUT_S4"                       => sprintf(__('Update process consists in downloading and then decompressing an updated library file from: %s, finally replaces the current local one.', 'geo-ip-library'), '<code>http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz</code>'),
+                "ABOUT_S5"                       => sprintf(__('The source project itself is named %s and was made by Chirag Mehta. For more information, see below:', 'geo-ip-library'), '<i>"php geoiplocation library - ip address to country"</i>'),
+                "AUTHOR_SITE"                    => __('Author site', 'geo-ip-library'),
+                "PROJECT_SITE"                   => __('Project site', 'geo-ip-library'),
+                "DATABASE_SITE"                  => __('Software77.net database site', 'geo-ip-library'),
+                "GIT_REPOSITORY"                 => __('Git repository', 'geo-ip-library')
             );
 
             $HTMLizer = new HTMLizer();
