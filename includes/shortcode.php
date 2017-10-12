@@ -35,17 +35,32 @@
          * @return  void
          */
         function shortcode($atts = [], $content = null) {
-            if(empty($atts['country']))
-                return "<p><i><b>" . __('Geo IP Library','geo-ip-library') . ":</b> " . __('Country not specified.', 'geo-ip-library') . "</i></p>";
+            $attributes = shortcode_atts(array(
+                "show"      => "*",
+                "exclude"   => ""
+            ), $atts);
+
+            if($attributes->show == '*' && !is_null($attributes->exclude) && empty($attributes->exclude))
+                return "<p><i><b>" . __('Geo IP Library','geo-ip-library') . ":</b> " . __('Exclude property was declared, but it is empty.', 'geo-ip-library') . "</i></p>";
+
+            if($attributes->show !== '*' && !empty($attributes['exclude']))
+                return "<p><i><b>" . __('Geo IP Library','geo-ip-library') . ":</b> " . __('Exclude property can no be declared <u>along</u> show property.', 'geo-ip-library') . "</i></p>";
 
             if(empty($content))
                 return "<p><i><b>" . __('Geo IP Library','geo-ip-library') . ":</b> " . __('No content found. Check for closing tag.', 'geo-ip-library') . "</i></p>";
 
-            $client_country = GeoIPLibrary::get_client_country_code();
-            $country_sanitized = strtoupper(trim($atts['country']));
-            $countries = preg_split('/\s*,\s*/', $country_sanitized);
+            $client_country     = GeoIPLibrary::get_client_country_code();
+
+            $show_sanitized     = strtoupper(trim($attributes['show']));
+            $show               = preg_split('/\s*,\s*/', $show_sanitized);
+
+            if(!is_null($attributes->exclude)) {
+
+            }
+            $exclude_sanitized  = strtoupper(trim($attributes['exclude']));
+            $exclude            = preg_split('/\s*,\s*/', $exclude_sanitized);
             
-            if(in_array($client_country, $countries))
+            if(($attributes['show'] == '*' || in_array($client_country, $show)) && !in_array($client_country, $exclude))
                 return do_shortcode($content);
 
             return null;
