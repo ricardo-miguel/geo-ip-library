@@ -124,7 +124,7 @@
                 "OTHER_SHORTCODE_DESCRIPTION"    => sprintf(__('This will display the content to all visitors from Canada and will process %s shortcode. Others will not see anything at all.', 'geo-ip-library'), '<i> ' . __('[my-other-shortcode]', 'geo-ip-library') . '</i>'),
                 "SHORTCODE_CEPTION"              => __('SHORTCODE-CEPTION', 'geo-ip-library'),
                 "CODING"                         => __('Coding', 'geo-ip-library'),
-                "CODING_DESCRIPTION"             => sprintf(__('The following static functions can be used anywhere along %s class:', 'geo-ip-library'), 'GeoIPLibrary'),
+                "CODING_DESCRIPTION"             => sprintf(__('The following static functions can be used anywhere along %s class:', 'geo-ip-library'), '<kbd>GeoIPLibrary</kbd>'),
                 "GET_CLIENT_ADDRESS"             => __('Returns the current client\'s IP address. It bypasses proxies and/or forwarding.', 'geo-ip-library'),
                 "GET_CLIENT_COUNTRY_CODE"        => sprintf(__('Returns the current client\'s %s country code or the specified at %s parameter.', 'geo-ip-library'), '<a href="https://wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>', '<span style="color: #369">$ip</span>'),
                 "GET_CLIENT_COUNTRY_NAME"        => sprintf(__('Returns the current client\'s country name or the specified at %s parameter.', 'geo-ip-library'), '<span style="color: #369">$ip</span>'),
@@ -142,7 +142,8 @@
                 "AUTHOR_SITE"                    => __('Author site', 'geo-ip-library'),
                 "PROJECT_SITE"                   => __('Project site', 'geo-ip-library'),
                 "DATABASE_SITE"                  => __('Software77.net database site', 'geo-ip-library'),
-                "GIT_REPOSITORY"                 => __('Git repository', 'geo-ip-library')
+                "GIT_REPOSITORY"                 => __('Git repository', 'geo-ip-library'),
+                "CLOSE_BOX"                      => __('Click anywhere outside this box to close.', 'geo-ip-library')
             );
 
             $HTMLizer = new HTMLizer();

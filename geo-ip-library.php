@@ -2,15 +2,15 @@
 
     /**
     * Plugin Name: Geo IP Library
-    * Plugin URI: http://ricardomiguel.cl/projects/geo-ip-library
-    * Description: Provides simple country location features by using <a href="http://chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
-    * Version: 0.9.1
+    * Plugin URI: //ricardomiguel.cl/projects/geo-ip-library
+    * Description: Provides simple country location features by using <a href="//chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
+    * Version: 0.9.5
     * Author: Ricardo Miguel
-    * Author URI: http://ricardomiguel.cl
+    * Author URI: //ricardomiguel.cl
     * Text Domain: geo-ip-library
     * Domain Path: /languages
     * License: GPLv3
-    * License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+    * License URI: //www.gnu.org/licenses/gpl-3.0-standalone.html
     *
     *
     * Geo IP Library is free software: you can redistribute it and/or modify
@@ -39,7 +39,7 @@
      * 
      * @since   0.1
      */
-    define('GEO_IP_LIBRARY_VERSION', '0.9.1');
+    define('GEO_IP_LIBRARY_VERSION', '0.9.5');
 
     /**
      * Set common constants

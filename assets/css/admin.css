@@ -178,7 +178,7 @@
 .geo-ip-about-wrapper .container {
   display: inline-block;
   width: 510px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0px 0px 4px 0px #D6D6D6;
   padding: 1.5em;
 }
@@ -202,6 +202,11 @@
 .geo-ip-about-wrapper .container .more-info {
   width: 100%;
   text-align: left;
+}
+
+.geo-ip-about-wrapper .container .close {
+  margin-top: 1em;
+  font-style: italic;
 }
 
 /* Ellipsis animation */
