@@ -64,7 +64,8 @@ Display different content for each country (or countries) within posts and pages
 [geo exclude="{2-digits country code [, other countries]}"]{plain text, HTML and/or shortcodes}[/geo]
 ```
 
-* [geo] tag is only available if no other plugin is using it (since it's a pretty common word)
+* [geo] tag is only available if no other plugin is using it (since it's a pretty common word).
+* *include* and *exclude* cannot be used together due to their purpose.
 
 <br />
 
