@@ -99,6 +99,7 @@ class Admin {
 
 		$vars = array(
 			'GEO_IP_LIBRARY'                 => __( 'Geo IP Library', 'geo-ip-library' ),
+			'LOGO'                           => GEO_IP_LIBRARY_URL . 'assets/img/logo_small.png',
 			'SOURCE'                         => __( 'Source', 'geo-ip-library' ),
 			'WHATS_THIS'                     => __( '(What\'s this?)', 'geo-ip-library' ),
 			'LATEST_UPDATE'                  => __( 'Latest update', 'geo-ip-library' ),
@@ -111,7 +112,7 @@ class Admin {
 			'PHP_VERSION'                    => __( 'PHP Version', 'geo-ip-library' ),
 			'PHP_VERSION_FUNC'               => phpversion(),
 			'SHORTCODE'                      => __( 'Shortcode', 'geo-ip-library' ),
-			'SHORTCODE_DESCRIPTION'          => sprintf( __( 'Display different content for each country (or countries) within posts and pages by using %1$s or %2$s tags. To do magic, use the following syntax:', 'geo-ip-library' ), '<strong>[geo-ip]</strong>', '<strong>[geo]</strong>' ),
+			'SHORTCODE_DESCRIPTION'          => sprintf( __( 'Display different content for each country (or countries) within posts and pages by using %1$s or %2$s tags. To do magic, see the following syntaxes:', 'geo-ip-library' ), '<strong>[geo-ip]</strong>', '<strong>[geo]<sup class="geo-ip-red">*</sup></strong>' ),
 			'SYNTAX'                         => __( 'SYNTAX', 'geo-ip-library' ),
 			'SYNTAX_COUNTRY'                 => __( '{2-digits country code [, other countries]}', 'geo-ip-library' ),
 			'SYNTAX_CONTENT'                 => __( '{plain text, HTML and/or shortcodes}', 'geo-ip-library' ),
@@ -119,7 +120,7 @@ class Admin {
 			'SINGLE_COUNTRY'                 => __( 'SINGLE COUNTRY', 'geo-ip-library' ),
 			'SINGLE_COUNTRY_DESCRIPTION'     => sprintf( __( 'This will display %s to all visitors from USA. Others will not see anything at all.', 'geo-ip-library' ), '<i>Hello world!</i>' ),
 			'MULTIPLE_COUNTRIES'             => __( 'MULTIPLE COUNTRIES', 'geo-ip-library' ),
-			'MULTIPLE_COUNTRIES_DESCRIPTION' => sprintf( __( 'This will display %s to all visitors from Chile, Spain and Mexico. Others will not see anything at all.', 'geo-ip-library' ), '<i>¡Hola mundo!</i>' ),
+			'MULTIPLE_COUNTRIES_DESCRIPTION' => sprintf( __( 'This will display %s world-wide. Well, almost; visitors from Chile, Spain and Mexico will not.', 'geo-ip-library' ), '<i>Hello world!</i>' ),
 			'OTHER_SHORTCODE'                => __( 'You can also call other shortcodes inside:', 'geo-ip-library' ),
 			'OTHER_SHORTCODE_SYNTAX'         => __( 'We\'re ready to go! See details below:', 'geo-ip-library' ),
 			'OTHER_SHORTCODE_TAG'            => __( '[my-other-shortcode]', 'geo-ip-library' ),

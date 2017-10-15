@@ -82,6 +82,15 @@
   font-size: 90%;
 }
 
+.geo-ip-logo {
+  width: 380px;
+  max-width: 100%;
+}
+
+.geo-ip-red {
+  color: #b40202;
+}
+
 .geo-ip-about:hover {
   cursor: help;
 }

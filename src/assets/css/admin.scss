@@ -78,6 +78,13 @@ $prefix: 'geo-ip';
     font-size: 90%;
 }
 
+.#{$prefix}-logo {
+    width: 380px;
+    max-width: 100%;
+}
+
+.#{$prefix}-red { color: #b40202; }
+
     .#{$prefix}-about:hover { cursor: help; }
 
 .#{$prefix}-button {

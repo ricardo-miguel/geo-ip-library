@@ -1,6 +1,6 @@
 <div class="geo-ip-wrapper">
     <div class="geo-ip-block geo-ip-center">
-        <h1>{GEO_IP_LIBRARY}</h1>
+        <img class="geo-ip-logo" src="{LOGO}" />
     </div>
     <p></p>
     <div class="geo-ip-block">
@@ -32,7 +32,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo-ip country</span><span style="color: #936">="</span><span style="color: #693">{SYNTAX_COUNTRY}</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{SYNTAX_CONTENT}</span><span style="color: #369">[/geo-ip]</span>
+                    <span style="color: #369">[geo-ip include</span><span style="color: #936">="</span><span style="color: #693">{SYNTAX_COUNTRY}</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{SYNTAX_CONTENT}</span><span style="color: #369">[/geo-ip]</span>
                 </td>
                 <td class="return">{SYNTAX}</td>
             </tr>
@@ -40,16 +40,17 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">{SYNTAX_COUNTRY}</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{SYNTAX_CONTENT}</span><span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo-ip exclude</span><span style="color: #936">="</span><span style="color: #693">{SYNTAX_COUNTRY}</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{SYNTAX_CONTENT}</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td class="return">{SYNTAX}</td>
             </tr>
         </table>
+        <p><sup class="geo-ip-red">*</sup> <sup><i>[geo] tag is only available if no other plugin is using it (since it's a pretty common word).</i></sup></p>
         <p>{USAGE_EXAMPLES}</p>
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">US</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">Hello world!</span><span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo-ip include</span><span style="color: #936">="</span><span style="color: #693">US</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">Hello world!</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td rowspan="2" class="return">{SINGLE_COUNTRY}</td>
             </tr>
@@ -60,7 +61,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">CL,ES,MX</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">¡Hola mundo!</span><span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo-ip exclude</span><span style="color: #936">="</span><span style="color: #693">CL,ES,MX</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">Hello world!</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td rowspan="2" class="return">{MULTIPLE_COUNTRIES}</td>
             </tr>
@@ -72,7 +73,7 @@
         <table class="geo-ip-function">
             <tr>
                 <td class="name">
-                    <span style="color: #369">[geo country</span><span style="color: #936">="</span><span style="color: #693">CA</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{OTHER_SHORTCODE_SYNTAX}</span><span style="color: #755">{OTHER_SHORTCODE_TAG}</span><span style="color: #369">[/geo]</span>
+                    <span style="color: #369">[geo-ip include</span><span style="color: #936">="</span><span style="color: #693">CA</span><span style="color: #936">"</span><span style="color: #369">]</span><span style="color: #666">{OTHER_SHORTCODE_SYNTAX}</span><span style="color: #755">{OTHER_SHORTCODE_TAG}</span><span style="color: #369">[/geo]</span>
                 </td>
                 <td rowspan="2" class="return">{SHORTCODE_CEPTION}</td>
             </tr>
