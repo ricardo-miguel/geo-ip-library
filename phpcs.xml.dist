@@ -14,7 +14,7 @@
 	<file>./src</file>
 
 	<!-- Disable warnings -->
-	<arg name="show_warnings" value="0"/>
+	<arg name="warning-severity" value="0"/>
 
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
