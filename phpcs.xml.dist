@@ -7,10 +7,11 @@
 
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/lib/*</exclude-pattern>
 
-	<!-- Check all PHP files in directory tree by default. -->
+	<!-- Check all PHP files in 'src' directory tree by default. -->
 	<arg name="extensions" value="php"/>
-	<file>.</file>
+	<file>./src</file>
 
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>

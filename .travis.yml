@@ -10,6 +10,7 @@ notifications:
 branches:
   only:
     - master
+    - testing
 
 cache:
   directories:
@@ -32,6 +33,12 @@ matrix:
       env: WP_TRAVISCI=phpcs
     - php: 5.4
       env: WP_VERSION=latest
+    - php: 5.3
+      env: WP_VERSION=latest
+      dist: precise
+    - php: 5.2
+      env: WP_VERSION=latest
+      dist: precise
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"

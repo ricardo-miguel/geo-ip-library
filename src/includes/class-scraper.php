@@ -22,7 +22,7 @@ class Scraper {
 	 * @since   0.0.2
 	 * @var     string
 	 */
-	protected $file   = GEO_IP_LIBRARY_PATH . 'lib/geoiploc.tar.gz';
+	protected $file;
 
 	/**
 	 * Source URI of library compressed file to download for
@@ -30,7 +30,15 @@ class Scraper {
 	 * @since   0.0.2
 	 * @var     string
 	 */
-	protected $source = 'http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz';
+	protected $source;
+
+	/**
+	 * Scraper construct
+	 */
+	function __construct() {
+		$file   = GEO_IP_LIBRARY_PATH . 'lib/geoiploc.tar.gz';
+		$source = 'http://chir.ag/projects/geoiploc/autogen/geoiploc.tar.gz';
+	}
 
 	/**
 	 * Initializes scraping related actions
