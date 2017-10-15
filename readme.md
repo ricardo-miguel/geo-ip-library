@@ -1,4 +1,5 @@
-# Geo IP Library
+# ![Hola](src/assets/img/logo_small.png)
+
 [![Travis](https://img.shields.io/travis/ricardo-miguel/geo-ip-library.svg)](https://travis-ci.org/ricardo-miguel/geo-ip-library)
 ![GitHub release](https://img.shields.io/github/release/ricardo-miguel/geo-ip-library.svg)
 ![PHP minimum](https://img.shields.io/badge/php-%3E%3D%205.3-8892be.svg)
