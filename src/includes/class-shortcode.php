@@ -39,7 +39,7 @@ class Shortcode {
 	 * @return  string|null
 	 */
 	function shortcode( $atts = [], $content = null ) {
-		$attributes = shortcode_atts(
+		$attributes = (object) shortcode_atts(
 			array(
 				'include'   => '*',
 				'exclude'   => '',
@@ -54,7 +54,7 @@ class Shortcode {
 			return '<p><i><b>' . __( 'Geo IP Library', 'geo-ip-library' ) . ':</b> ' . __( 'No content found. Check for closing tag.', 'geo-ip-library' ) . '</i></p>';
 		}
 
-		$client_country     = GeoIPLibrary::get_client_country_code();
+		$client_country     = \GeoIPLibrary::get_client_country_code();
 
 		$show_sanitized     = strtoupper( trim( $attributes->include ) );
 		$show               = preg_split( '/\s*,\s*/', $show_sanitized );
@@ -62,7 +62,7 @@ class Shortcode {
 		$exclude_sanitized  = strtoupper( trim( $attributes->exclude ) );
 		$exclude            = preg_split( '/\s*,\s*/', $exclude_sanitized );
 
-		if ( ( '*' == $attributes['show'] || in_array( $client_country, $show ) ) && ! in_array( $client_country, $exclude ) ) {
+		if ( ( '*' == $attributes->include || in_array( $client_country, $show ) ) && ! in_array( $client_country, $exclude ) ) {
 			return do_shortcode( $content );
 		}
 
