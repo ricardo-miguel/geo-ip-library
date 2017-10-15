@@ -38,7 +38,7 @@ class Shortcode {
 	 * @param   string $content    Content between opening and closing tags.
 	 * @return  string|null
 	 */
-	function shortcode( $atts = [], $content = null ) {
+	function shortcode( $atts = array(), $content = null ) {
 		$attributes = (object) shortcode_atts(
 			array(
 				'include'   => '*',
