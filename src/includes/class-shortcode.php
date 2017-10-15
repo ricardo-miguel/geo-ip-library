@@ -47,7 +47,7 @@ class Shortcode {
 		);
 
 		if ( '*' !== $attributes->include && ! empty( $attributes->exclude ) ) {
-			return '<p><i><b>' . __( 'Geo IP Library', 'geo-ip-library' ) . ':</b> ' . __( 'Exclude property can no be declared <u>along</u> show property.', 'geo-ip-library' ) . '</i></p>';
+			return '<p><i><b>' . __( 'Geo IP Library', 'geo-ip-library' ) . ':</b> ' . __( 'Exclude property cannot be declared <u>along</u> include property.', 'geo-ip-library' ) . '</i></p>';
 		}
 
 		if ( empty( $content ) ) {
