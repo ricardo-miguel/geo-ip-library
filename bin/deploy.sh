@@ -95,7 +95,7 @@ rm -fR svn-trunk
 
 # Add new version tag
 mkdir svn/tags/$VERSION
-rsync -r -p $WP_PLUGIN_SLUG/* svn/tags/$VERSION
+rsync -r -p src/* svn/tags/$VERSION
 
 # Add new files to SVN
 svn stat svn | grep '^?' | awk '{print $2}' | xargs -I x svn add x@
