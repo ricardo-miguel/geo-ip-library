@@ -66,3 +66,12 @@ script:
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
       phpcs
     fi
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: ./bin/deploy.sh
+  on:
+    branch: master
+    php: 5.6
+    env: WP_TRAVISCI=phpcs
