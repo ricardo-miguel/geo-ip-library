@@ -68,6 +68,8 @@ cd "$PROJECT_ROOT/build"
 echo "== STEP 5: Unzipping plugin source build into /build"
 unzip -q -o "$ZIP_FILE" -d "$PROJECT_ROOT/build"
 
+tree . -L 1
+
 # Checkout the SVN repo
 echo "== STEP 6: Checking out (importing) SVN repository"
 svn co -q "http://svn.wp-plugins.org/$WP_PLUGIN_SLUG" svn
@@ -82,7 +84,7 @@ mkdir -p svn/trunk
 
 # Copy our new version of the plugin into trunk
 echo "== STEP 9: Move new plugin source to trunk"
-rsync -r -p src/* svn/trunk
+rsync -r -p ./src/* svn/trunk
 
 # Copy all the .svn folders from the checked out copy of trunk to the new trunk.
 # This is necessary as the Travis container runs Subversion 1.6 which has .svn dirs in every sub dir
