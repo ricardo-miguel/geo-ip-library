@@ -62,6 +62,7 @@ echo $PWD
 
 # Clean up trunk and copy new source code
 echo "== STEP 5: Clean up trunk and copy new source code"
+svn cleanup
 rm -rf trunk/*
 cp -R $PLUGIN_SOURCE/* trunk
 
