@@ -53,7 +53,7 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: sh bin/deploy.sh
+  script: bash ./bin/deploy.sh
   on:
     branch: testing
     php: 7.2
