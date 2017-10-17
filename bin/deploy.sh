@@ -32,7 +32,7 @@ echo "VERSION: $VERSION"
 echo "ZIP TO BUILD: $ZIP_FILE"
 
 # Build plugin zip at project root
-zip -r $ZIP_FILE $PROJECT_ROOT
+zip -r $ZIP_FILE $PLUGIN_SOURCE
 
 # Ensure the zip file for the current version has been built
 if [ ! -f "$ZIP_FILE" ]; then
@@ -103,7 +103,7 @@ svn stat svn | grep '^!' | awk '{print $2}' | xargs -I x svn rm --force x@
 svn stat svn
 
 # Commit to SVN
-svn ci --no-auth-cache --username $WP_ORG_USERNAME --password $WP_ORG_PASSWORD svn -m "Deploy version $VERSION"
+svn ci --no-auth-cache --username $WP_SVN_USER --password $WP_SVN_PASSWORD svn -m "Deploy version $VERSION"
 
 # Remove SVN temp dir
 rm -fR svn
