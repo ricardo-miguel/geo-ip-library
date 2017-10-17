@@ -31,9 +31,6 @@ echo "PLUGIN_SOURCE: $PLUGIN_SOURCE"
 echo "VERSION: $VERSION"
 echo "ZIP TO BUILD: $ZIP_FILE"
 
-whereis phpenv
-exit 0
-
 # Build plugin zip at project root
 zip -r $ZIP_FILE $PROJECT_ROOT
 
@@ -52,24 +49,21 @@ if [ $error == 0 ]; then
     exit 1
 fi
 
-mkdir "$PROJECT_ROOT/builds"
-cd "$PROJECT_ROOT/builds"
+mkdir "$PROJECT_ROOT/build"
+cd "$PROJECT_ROOT/build"
 
-# Remove any unzipped dir so we start from scratch
-rm -fR "$WP_PLUGIN_SLUG"
 # Unzip the built plugin
 unzip -q -o "$ZIP_FILE"
-
-# Clean up any previous svn dir
-rm -fR svn
 
 # Checkout the SVN repo
 svn co -q "http://svn.wp-plugins.org/$WP_PLUGIN_SLUG" svn
 
 # Move out the trunk directory to a temp location
 mv svn/trunk ./svn-trunk
+
 # Create trunk directory
 mkdir svn/trunk
+
 # Copy our new version of the plugin into trunk
 rsync -r -p $WP_PLUGIN_SLUG/* svn/trunk
 
