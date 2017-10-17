@@ -71,7 +71,8 @@ mkdir -p tags/$VERSION
 cp -R trunk/* tags/$VERSION
 
 echo "== STEP 7: Add files to SVN"
-svn add trunk/*
+svn add --force trunk/* --auto-props --parents --depth infinity -q
+svn add --force tags/* --auto-props --parents --depth infinity -q
 
 echo "== STEP 8: Commit new release"
 svn ci -m "Deploy version $VERSION" --username $WP_SVN_USER --password $WP_SVN_PASSWORD --no-auth-cache
