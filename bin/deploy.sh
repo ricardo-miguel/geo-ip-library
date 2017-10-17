@@ -55,14 +55,17 @@ cd "$PROJECT_ROOT/build"
 echo "== STEP 3: Importing remote SVN repository"
 svn co "http://svn.wp-plugins.org/$WP_PLUGIN_SLUG"
 
+echo "== STEP 4: Switching to SVN copy folder"
+cd "$WP_PLUGIN_SLUG"
+
 # Clean up trunk and copy new source code
-echo "== STEP 4: Clean up trunk and copy new source code"
+echo "== STEP 5: Clean up trunk and copy new source code"
 rm -r trunk/*
 cp -R $PLUGIN_SOURCE/* trunk
 
-echo "== STEP 5: Also, copy version tag"
+echo "== STEP 6: Also, copy version tag"
 mkdir -p tags/$VERSION
 cp -R $PLUGIN_SOURCE/* tags/$VERSION
 
-echo "== STEP 6: Commit new release"
+echo "== STEP 7: Commit new release"
 svn ci --no-auth-cache --username $WP_SVN_USER --password $WP_SVN_PASSWORD svn -m "Deploy version $VERSION"
