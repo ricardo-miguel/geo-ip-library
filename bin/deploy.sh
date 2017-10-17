@@ -32,7 +32,7 @@ echo "VERSION: $VERSION"
 echo "ZIP TO BUILD: $ZIP_FILE"
 
 # Build plugin zip at project root
-zip -r $ZIP_FILE $PLUGIN_SOURCE
+zip -r $ZIP_FILE $PLUGIN_SOURCE -x "lib/geoiploc.tar.gz"
 
 # Ensure the zip file for the current version has been built
 if [ ! -f "$ZIP_FILE" ]; then
@@ -49,6 +49,7 @@ if [ $error == 0 ]; then
     exit 1
 fi
 
+# Proceed to build SVN
 mkdir "$PROJECT_ROOT/build"
 cd "$PROJECT_ROOT/build"
 
@@ -65,7 +66,7 @@ mv svn/trunk ./svn-trunk
 mkdir svn/trunk
 
 # Copy our new version of the plugin into trunk
-rsync -r -p $WP_PLUGIN_SLUG/* svn/trunk
+rsync -r -p src/* svn/trunk
 
 # Copy all the .svn folders from the checked out copy of trunk to the new trunk.
 # This is necessary as the Travis container runs Subversion 1.6 which has .svn dirs in every sub dir
