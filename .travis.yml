@@ -72,6 +72,6 @@ deploy:
   skip_cleanup: true
   script: ./bin/deploy.sh
   on:
-    branch: master
+    branch: testing
     php: 5.6
     env: WP_TRAVISCI=phpcs
