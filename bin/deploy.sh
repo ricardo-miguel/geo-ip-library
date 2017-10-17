@@ -21,18 +21,18 @@ if [[ -z "$TRAVIS_BRANCH" || "$TRAVIS_BRANCH" != "testing" ]]; then
 fi
 
 
-whereis php
-exit 0
-
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 PLUGIN_SOURCE="$PROJECT_ROOT/src"
-VERSION=$(/usr/bin/php -f "$PROJECT_ROOT/version.php")
+VERSION=$(php -f "$PROJECT_ROOT/version.php")
 ZIP_FILE="$PROJECT_ROOT/$WP_PLUGIN_SLUG-$VERSION.zip"
 
 echo "PROJECT_ROOT: $PROJECT_ROOT"
 echo "PLUGIN_SOURCE: $PLUGIN_SOURCE"
 echo "VERSION: $VERSION"
 echo "ZIP TO BUILD: $ZIP_FILE"
+
+whereis phpenv
+exit 0
 
 # Build plugin zip at project root
 zip -r $ZIP_FILE $PROJECT_ROOT
