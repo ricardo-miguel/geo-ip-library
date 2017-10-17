@@ -68,7 +68,7 @@ cp -R $PLUGIN_SOURCE/* trunk
 
 echo "== STEP 6: Also, copy version tag"
 mkdir -p tags/$VERSION
-svn cp trunk tags/$VERSION
+cp -R trunk/* tags/$VERSION
 
 echo "== STEP 7: Add files to SVN"
 svn add trunk/*
