@@ -31,7 +31,6 @@ echo "PROJECT_ROOT: $PROJECT_ROOT"
 echo "PLUGIN_SOURCE: $PLUGIN_SOURCE"
 echo "VERSION: $VERSION"
 echo "ZIP TO BUILD: $ZIP_FILE"
-echo "=="
 
 echo " "
 echo "== All project variables available"
@@ -68,8 +67,6 @@ cd "$PROJECT_ROOT/build"
 echo "== STEP 5: Unzipping plugin source build into /build"
 unzip -q -o "$ZIP_FILE" -d "$PROJECT_ROOT/build"
 
-tree . -L 1
-
 # Checkout the SVN repo
 echo "== STEP 6: Checking out (importing) SVN repository"
 svn co -q "http://svn.wp-plugins.org/$WP_PLUGIN_SLUG" svn
@@ -81,6 +78,8 @@ mv svn/trunk ./svn-trunk
 # Create trunk directory
 echo "== STEP 8: Create new trunk folder"
 mkdir -p svn/trunk
+
+tree -L 2
 
 # Copy our new version of the plugin into trunk
 echo "== STEP 9: Move new plugin source to trunk"
