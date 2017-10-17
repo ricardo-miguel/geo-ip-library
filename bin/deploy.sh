@@ -62,12 +62,15 @@ echo $PWD
 
 # Clean up trunk and copy new source code
 echo "== STEP 5: Clean up trunk and copy new source code"
-rm -r trunk/*
+rm -rf trunk/*
 cp -R $PLUGIN_SOURCE/* trunk
 
 echo "== STEP 6: Also, copy version tag"
 mkdir -p tags/$VERSION
 cp -R $PLUGIN_SOURCE/* tags/$VERSION
 
+echo "== STEP 7: Add files to SVN"
+svn add .
+
 echo "== STEP 7: Commit new release"
-svn ci --no-auth-cache --username $WP_SVN_USER --password $WP_SVN_PASSWORD . -m "Deploy version $VERSION"
+svn ci -m "Deploy version $VERSION" --username $WP_SVN_USER --password $WP_SVN_PASSWORD --no-auth-cache
