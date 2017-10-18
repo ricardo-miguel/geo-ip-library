@@ -10,7 +10,6 @@ notifications:
 branches:
   only:
     - master
-    - testing
 
 cache:
   directories:
@@ -21,6 +20,23 @@ matrix:
   include:
     - php: 7.2
       env: WP_VERSION=latest
+    - php: 7.1
+      env: WP_VERSION=latest
+    - php: 7.0
+      env: WP_VERSION=latest
+    - php: 5.6
+      env: WP_VERSION=4.3
+    - php: 5.6
+      env: WP_VERSION=latest
+    - php: 5.6
+      env: WP_VERSION=trunk
+    - php: 5.6
+      env: WP_TRAVISCI=phpcs
+    - php: 5.4
+      env: WP_VERSION=latest
+    - php: 5.3
+      env: WP_VERSION=latest
+      dist: precise
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -55,5 +71,6 @@ deploy:
   skip_cleanup: true
   script: bash ./bin/deploy.sh
   on:
-    branch: testing
-    php: 7.2
+    branch: master
+    php: 5.6
+    condition: "$WP_TRAVISCI" == "phpcs"
