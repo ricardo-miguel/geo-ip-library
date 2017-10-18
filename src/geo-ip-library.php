@@ -3,7 +3,7 @@
  * Plugin Name: Geo IP Library
  * Plugin URI: //ricardomiguel.cl/projects/geo-ip-library
  * Description: Provides simple country location features by using <a href="//chir.ag/projects/geoiploc/">Chir's geolocation library</a>.
- * Version: 0.9.6
+ * Version: 0.9.7
  * Author: Ricardo Miguel
  * Author URI: //ricardomiguel.cl
  * Text Domain: geo-ip-library
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies, please!' );
  *
  * @since   0.1
  */
-define( 'GEO_IP_LIBRARY_VERSION', '0.9.6' );
+define( 'GEO_IP_LIBRARY_VERSION', '0.9.7' );
 
 /**
  * Set common constants
