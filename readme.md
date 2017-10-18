@@ -5,6 +5,11 @@
 ![PHP minimum](https://img.shields.io/badge/php-%3E%3D%205.3-8892be.svg)
 [![license](https://img.shields.io/github/license/ricardo-miguel/geo-ip-library.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
 
+[![WP version](https://img.shields.io/wordpress/v/geo-ip-library.svg)](https://wordpress.org/plugins/geo-ip-library/)
+[![WP downloads](https://img.shields.io/wordpress/plugin/dt/geo-ip-library.svg)](https://wordpress.org/plugins/geo-ip-library/)
+[![WordPress rating](https://img.shields.io/wordpress/plugin/r/geo-ip-library.svg)](https://wordpress.org/plugins/geo-ip-library/)
+
+
 Provides simple geo ip country location features for Wordpress.
 
 <br />
