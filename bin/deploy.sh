@@ -15,7 +15,7 @@ if [[ -z "$WP_SVN_PASSWORD" ]]; then
 	exit 1
 fi
 
-if [[ -z "$TRAVIS_BRANCH" || "$TRAVIS_BRANCH" != "testing" ]]; then
+if [[ -z "$TRAVIS_BRANCH" || "$TRAVIS_BRANCH" != "master" ]]; then
 	echo "Build branch is required and must be 'master'" 1>&2
 	exit 0
 fi
