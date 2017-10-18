@@ -39,7 +39,6 @@ The library can be updated every 72 hours. It is not really necessary a minor in
 = Shortcode =
 Display different content for each country (or countries) within posts and pages by using **[geo-ip]** or **[geo]** tags. To do magic, see the following syntaxes:
 
-
 	/**
 	* INCLUDE PROPERTY
 	* Display content to a specific country or many countries
@@ -71,7 +70,6 @@ Display different content for each country (or countries) within posts and pages
 
 The following static functions can be used anywhere along GeoIPLibrary class:
 
-
 	/** Returns the current client's IP address as STRING. 
 		* It bypasses proxies and/or forwarding. 
 		* Returns FALSE if it fails. */
@@ -90,6 +88,5 @@ The following static functions can be used anywhere along GeoIPLibrary class:
 	GeoIPLibrary::get_client_country_name(string $ip = '')
 
 
-
-== About plugin ==
+== Contributions ==
 Geo IP Library is still in development, but currently stable. You can contribute with new ideas, coding improves/issues and even grammar/spelling check (english is not my mother language). Feel free to [make a pull request](https://github.com/ricardo-miguel/geo-ip-library/pulls) or [open an issue](https://github.com/ricardo-miguel/geo-ip-library/issues).
